@@ -1,0 +1,1529 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Relatório de Pré-processamento para Concessão de Crédito</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            :root {
+                --ink: #111827;
+                --muted: #5b6472;
+                --line: #d8e0ea;
+                --soft: #f4f7fb;
+                --paper: #ffffff;
+                --blue: #0b63b6;
+                --green: #1f7a4d;
+                --amber: #a86600;
+                --red: #a8241b;
+                --teal: #087f8c;
+                --shadow: 0 10px 30px rgba(17, 24, 39, 0.08);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                margin: 0;
+                color: var(--ink);
+                background: #eef3f8;
+                font-family: "Figtree", Arial, Helvetica, sans-serif;
+                line-height: 1.62;
+            }
+
+            header {
+                color: #fff;
+                background: linear-gradient(
+                    135deg,
+                    #10243a 0%,
+                    #0b63b6 58%,
+                    #087f8c 100%
+                );
+                padding: 44px 24px 40px;
+            }
+
+            .wrap {
+                width: min(1180px, calc(100% - 36px));
+                margin: 0 auto;
+            }
+
+            .eyebrow {
+                margin: 0 0 10px;
+                font-size: 13px;
+                font-weight: 800;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                opacity: 0.9;
+            }
+
+            h1 {
+                margin: 0;
+                max-width: 960px;
+                font-size: clamp(30px, 4.8vw, 54px);
+                line-height: 1.05;
+            }
+
+            .subtitle {
+                margin: 18px 0 0;
+                max-width: 900px;
+                color: rgba(255, 255, 255, 0.9);
+                font-size: 18px;
+            }
+
+            .authors {
+                margin-top: 22px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+
+            .author {
+                color: #fff;
+                border: 1px solid rgba(255, 255, 255, 0.34);
+                background: rgba(255, 255, 255, 0.12);
+                border-radius: 999px;
+                padding: 7px 12px;
+                font-size: 14px;
+            }
+
+            nav {
+                position: sticky;
+                top: 0;
+                z-index: 10;
+                background: rgba(255, 255, 255, 0.96);
+                border-bottom: 1px solid var(--line);
+                backdrop-filter: blur(10px);
+            }
+
+            nav .wrap {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 6px;
+                padding: 10px 0;
+            }
+
+            nav a {
+                flex: 0 0 auto;
+                color: var(--ink);
+                text-decoration: none;
+                border: 1px solid transparent;
+                border-radius: 8px;
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+
+            nav a:hover {
+                background: var(--soft);
+                border-color: var(--line);
+            }
+
+            main {
+                padding: 26px 0 58px;
+            }
+
+            section {
+                scroll-margin-top: 46px;
+                margin: 18px 0;
+                background: var(--paper);
+                border: 1px solid var(--line);
+                border-radius: 8px;
+                box-shadow: var(--shadow);
+                padding: 24px;
+            }
+
+            h2 {
+                margin: 0 0 14px;
+                font-size: 25px;
+                line-height: 1.18;
+            }
+
+            h3 {
+                margin: 24px 0 9px;
+                font-size: 18px;
+            }
+
+            p {
+                margin: 0 0 13px;
+            }
+
+            ul,
+            ol {
+                margin: 8px 0 16px;
+                padding-left: 22px;
+            }
+
+            li {
+                margin: 6px 0;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 12px 0 20px;
+                font-size: 14px;
+            }
+
+            th,
+            td {
+                border: 1px solid var(--line);
+                padding: 10px 12px;
+                text-align: left;
+                vertical-align: top;
+            }
+
+            th {
+                background: #eaf2f9;
+                color: #10243a;
+                font-weight: 800;
+            }
+
+            code {
+                background: #edf4fa;
+                border: 1px solid #d8e5ef;
+                border-radius: 5px;
+                padding: 1px 5px;
+                font-family: Consolas, Monaco, monospace;
+                font-size: 0.94em;
+            }
+
+            pre {
+                overflow: auto;
+                background: #101820;
+                color: #eaf2f8;
+                border: 1px solid #203142;
+                border-radius: 8px;
+                padding: 16px;
+                font-size: 13px;
+                line-height: 1.45;
+                white-space: pre-wrap;
+            }
+
+            pre code {
+                display: block;
+                color: inherit;
+                background: transparent;
+                border: 0;
+                padding: 0;
+                white-space: pre-wrap;
+            }
+
+            .grid {
+                display: grid;
+                gap: 14px;
+            }
+
+            .cards {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+
+            .metric-card {
+                min-height: 118px;
+                background: var(--soft);
+                border: 1px solid var(--line);
+                border-radius: 8px;
+                padding: 16px;
+            }
+
+            .metric-card strong {
+                display: block;
+                margin-bottom: 8px;
+                color: var(--blue);
+                font-size: 28px;
+                line-height: 1.05;
+            }
+
+            .metric-card span {
+                display: block;
+                color: var(--muted);
+                font-size: 14px;
+            }
+
+            .callout {
+                margin: 16px 0;
+                padding: 14px 16px;
+                background: #eef6fc;
+                border-left: 5px solid var(--blue);
+                border-radius: 8px;
+            }
+
+            .warning {
+                background: #fff7e8;
+                border-left-color: var(--amber);
+            }
+
+            .ok {
+                background: #eefaf3;
+                border-left-color: var(--green);
+            }
+
+            .bar-row {
+                display: grid;
+                grid-template-columns: 180px 1fr 160px;
+                gap: 12px;
+                align-items: center;
+                margin: 10px 0;
+                font-size: 14px;
+            }
+
+            .bar-track {
+                height: 16px;
+                overflow: hidden;
+                background: #e7edf2;
+                border: 1px solid #d6e0e8;
+                border-radius: 999px;
+            }
+
+            .bar {
+                height: 100%;
+                border-radius: 999px;
+            }
+
+            .green {
+                background: var(--green);
+            }
+            .red {
+                background: var(--red);
+            }
+            .amber {
+                background: var(--amber);
+            }
+            .blue {
+                background: var(--blue);
+            }
+
+            .tag-list {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin: 10px 0 18px;
+            }
+
+            .tag {
+                border: 1px solid var(--line);
+                background: var(--soft);
+                border-radius: 999px;
+                padding: 6px 10px;
+                font-size: 13px;
+            }
+
+            .two-col {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+            }
+
+            footer {
+                color: var(--muted);
+                padding: 18px 0 38px;
+                font-size: 13px;
+            }
+
+            @media (max-width: 900px) {
+                .cards,
+                .two-col {
+                    grid-template-columns: 1fr;
+                }
+
+                .bar-row {
+                    grid-template-columns: 1fr;
+                    gap: 6px;
+                }
+            }
+
+            @media print {
+                body {
+                    background: #fff;
+                }
+
+                nav {
+                    display: none;
+                }
+
+                section {
+                    box-shadow: none;
+                    break-inside: avoid;
+                }
+
+                header {
+                    color: #000;
+                    background: #fff;
+                    border-bottom: 2px solid #000;
+                }
+
+                .subtitle {
+                    color: #333;
+                }
+
+                .author {
+                    color: #000;
+                    border-color: #999;
+                    background: #fff;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="wrap">
+                <p class="eyebrow">
+                    Universidade Federal de Uberlândia - Ciência de Dados
+                </p>
+                <h1>
+                    Relatório de Pré-processamento para Concessão de Crédito
+                </h1>
+                <p class="subtitle">
+                    Integração, limpeza, agregação e documentação das bases de
+                    empréstimos, histórico externo Serasa e histórico interno de
+                    empréstimos anteriores.
+                </p>
+                <div class="authors" aria-label="Integrantes">
+                    <span class="author">Gil Antony Borba</span>
+                    <span class="author">Raphael Muniz Varela</span>
+                    <span class="author">Victor Leal</span>
+                    <span class="author">Ygor Marangoni</span>
+                </div>
+            </div>
+        </header>
+
+        <nav aria-label="Navegação do relatório">
+            <div class="wrap">
+                <a href="#resumo">Resumo</a>
+                <a href="#apresentacao">Apresentação</a>
+                <a href="#introducao">Introdução</a>
+                <a href="#bases">Bases</a>
+                <a href="#variaveis">Variáveis</a>
+                <a href="#agregacoes">Agregações</a>
+                <a href="#base-final">Base final</a>
+                <a href="#desbalanceamento">Desbalanceamento</a>
+                <a href="#metrica">Métrica</a>
+                <a href="#resultados">Resultados</a>
+                <a href="#entrega">Entrega</a>
+                <a href="#conclusao">Conclusão</a>
+            </div>
+        </nav>
+
+        <main class="wrap">
+            <section id="resumo">
+                <h2>Resumo executivo</h2>
+                <p>
+                    Este trabalho realizou o pré-processamento de três bases de
+                    crédito:
+                    <code>emprestimos.csv</code>, <code>serasa.csv</code> e
+                    <code>emprestimos_anteriores.csv</code>. A base de
+                    empréstimos foi tratada como base principal, pois contém a
+                    variável alvo <code>TARGET</code> e uma linha por cliente da
+                    amostra. As outras duas bases foram agregadas por
+                    <code>SK_ID_CURR</code> antes da junção, evitando
+                    duplicidade de clientes.
+                </p>
+                <p>
+                    O resultado foi uma base final limpa, sem valores ausentes,
+                    com variáveis demográficas selecionadas, campos financeiros,
+                    agregações de histórico externo e interno, variáveis
+                    categóricas codificadas e uma métrica de risco calculada em
+                    uma cópia de trabalho.
+                </p>
+
+                <div class="grid cards">
+                    <div class="metric-card">
+                        <strong>307.511</strong>
+                        <span>registros preservados da base principal</span>
+                    </div>
+                    <div class="metric-card">
+                        <strong>41</strong>
+                        <span>colunas na base final preprocessada</span>
+                    </div>
+                    <div class="metric-card">
+                        <strong>43</strong>
+                        <span>colunas na base final com métrica</span>
+                    </div>
+                    <div class="metric-card">
+                        <strong>0</strong>
+                        <span>valores ausentes após o tratamento final</span>
+                    </div>
+                </div>
+
+                <div class="callout ok">
+                    <strong>Ideia central:</strong> o objetivo não foi treinar
+                    um modelo, mas preparar uma base robusta, rastreável e
+                    reprodutível para uma futura etapa de Machine Learning.
+                </div>
+            </section>
+
+            <section id="apresentacao">
+                <h2>Como vamos apresentar</h2>
+                <p>
+                    A apresentação segue a ordem natural do projeto. Primeiro
+                    são apresentadas as bases, depois as agregações, em seguida
+                    os tratamentos e, por fim, a métrica, os arquivos finais e a
+                    conclusão.
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Quem apresenta</th>
+                            <th>Tópicos do relatório</th>
+                            <th>Foco da apresentação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Gil Antony</strong></td>
+                            <td>Descrição das bases de dados</td>
+                            <td>
+                                Apresentar as três fontes, a chave
+                                <code>SK_ID_CURR</code> e a variável alvo
+                                <code>TARGET</code>.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Raphael</strong></td>
+                            <td>Seleção de variáveis e agregações</td>
+                            <td>
+                                Explicar quais campos foram usados e como os
+                                históricos foram resumidos por cliente.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Victor</strong></td>
+                            <td>Construção da base final e tratamentos</td>
+                            <td>
+                                Mostrar tratamento de ausentes, codificação das
+                                categorias e cuidado com o desbalanceamento.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ygor</strong></td>
+                            <td>Métrica, resultados, entrega e conclusão</td>
+                            <td>
+                                Apresentar a métrica de risco, as conferências
+                                finais, os arquivos gerados e o fechamento.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="introducao">
+                <h2>1. Introdução</h2>
+                <p>
+                    O pré-processamento é uma etapa essencial em projetos de
+                    Ciência de Dados. Antes de aplicar algoritmos de Machine
+                    Learning, é necessário compreender a origem dos dados,
+                    selecionar variáveis relevantes, integrar fontes diferentes,
+                    tratar inconsistências, lidar com valores ausentes e
+                    documentar as transformações realizadas.
+                </p>
+                <p>
+                    Neste projeto, o cenário analisado é a concessão de crédito.
+                    A variável de interesse é o comportamento do cliente em
+                    relação ao pagamento. O campo <code>TARGET</code> assume
+                    valor <code>0</code> para clientes saudáveis, sem
+                    dificuldade de pagamento, e valor <code>1</code> para
+                    clientes de risco, com dificuldade ou atraso.
+                </p>
+                <p>
+                    A estratégia adotada foi manter a base
+                    <code>emprestimos.csv</code> como base âncora e enriquecer
+                    cada cliente com informações resumidas do histórico externo
+                    e do histórico interno. Todas as etapas foram implementadas
+                    em Python com pandas e SQLite, e os resultados foram salvos
+                    em CSV, JSON e banco de dados.
+                </p>
+            </section>
+
+            <section id="bases">
+                <h2>2. Descrição das bases de dados</h2>
+                <p>
+                    As três bases possuem granularidades diferentes. A base
+                    principal tem uma linha por solicitação da amostra. Já as
+                    bases Serasa e empréstimos anteriores podem ter múltiplas
+                    linhas para o mesmo cliente, exigindo agregações antes da
+                    junção.
+                </p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Arquivo</th>
+                            <th>Descrição</th>
+                            <th>Registros</th>
+                            <th>Granularidade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>emprestimos.csv</code></td>
+                            <td>
+                                Base principal com dados demográficos,
+                                financeiros e variável alvo.
+                            </td>
+                            <td>307.511</td>
+                            <td>
+                                Uma linha por cliente/solicitação da amostra.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>serasa.csv</code></td>
+                            <td>
+                                Histórico externo do cliente em outras
+                                instituições financeiras.
+                            </td>
+                            <td>1.716.428</td>
+                            <td>
+                                Várias linhas por cliente, uma para cada crédito
+                                anterior no bureau.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>emprestimos_anteriores.csv</code></td>
+                            <td>
+                                Histórico interno de solicitações anteriores na
+                                própria instituição.
+                            </td>
+                            <td>1.670.214</td>
+                            <td>
+                                Várias linhas por cliente, uma para cada
+                                solicitação anterior.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>2.1 Base Empréstimos</h3>
+                <p>
+                    A base <code>emprestimos.csv</code> foi usada como
+                    referência central do projeto. Dela foram preservados a
+                    chave <code>SK_ID_CURR</code>, a variável alvo
+                    <code>TARGET</code>, variáveis financeiras como renda e
+                    valor de crédito, além de dados demográficos e sociais
+                    selecionados.
+                </p>
+
+                <h3>2.2 Base Serasa</h3>
+                <p>
+                    A base <code>serasa.csv</code> contém créditos anteriores
+                    reportados ao bureau. Como o mesmo cliente pode ter vários
+                    créditos registrados, a base não deve ser unida diretamente
+                    à base principal. Primeiro ela foi resumida por
+                    <code>SK_ID_CURR</code>.
+                </p>
+
+                <h3>2.3 Base Empréstimos anteriores</h3>
+                <p>
+                    A base <code>emprestimos_anteriores.csv</code> representa o
+                    histórico interno de solicitações anteriores. Ela permite
+                    avaliar se o cliente já tentou crédito na instituição, se já
+                    foi recusado, se pediu seguro e qual foi a diferença entre o
+                    valor solicitado e o valor aprovado.
+                </p>
+            </section>
+
+            <section id="variaveis">
+                <h2>3. Seleção e justificativa das variáveis</h2>
+                <p>
+                    A seleção de variáveis seguiu o enunciado e buscou manter
+                    atributos relevantes para análise de risco. Foram usados
+                    todos os campos obrigatórios da base de empréstimos e mais
+                    de três campos opcionais, ampliando a capacidade descritiva
+                    da base final.
+                </p>
+
+                <h3>Variáveis da base principal</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Campo</th>
+                            <th>Uso no trabalho</th>
+                            <th>Justificativa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>SK_ID_CURR</code></td>
+                            <td>Chave primária</td>
+                            <td>
+                                Permite unir as três bases no nível do cliente.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>TARGET</code></td>
+                            <td>Variável alvo</td>
+                            <td>
+                                Indica cliente saudável ou cliente de risco.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>AMT_INCOME_TOTAL</code></td>
+                            <td>Variável financeira</td>
+                            <td>Representa renda total do cliente.</td>
+                        </tr>
+                        <tr>
+                            <td><code>AMT_CREDIT</code></td>
+                            <td>Variável financeira</td>
+                            <td>
+                                Representa valor do crédito
+                                solicitado/concedido.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>NAME_EDUCATION_TYPE</code></td>
+                            <td>Categórica</td>
+                            <td>Registra nível de escolaridade.</td>
+                        </tr>
+                        <tr>
+                            <td><code>DAYS_BIRTH</code></td>
+                            <td>Transformada em <code>AGE_YEARS</code></td>
+                            <td>
+                                Idade em anos é mais interpretável que idade em
+                                dias.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>EXT_SOURCE_1</code>,
+                                <code>EXT_SOURCE_2</code>,
+                                <code>EXT_SOURCE_3</code>
+                            </td>
+                            <td>Scores externos</td>
+                            <td>
+                                Ajudam a representar sinais externos de risco.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>
+                    Além dos campos acima, foram selecionados:
+                    <code>CODE_GENDER</code>, <code>FLAG_OWN_CAR</code>,
+                    <code>FLAG_OWN_REALTY</code>, <code>CNT_CHILDREN</code>,
+                    <code>NAME_INCOME_TYPE</code>,
+                    <code>NAME_FAMILY_STATUS</code>,
+                    <code>NAME_HOUSING_TYPE</code>, <code>FLAG_MOBIL</code>,
+                    <code>FLAG_EMP_PHONE</code>, <code>FLAG_EMAIL</code>,
+                    <code>OCCUPATION_TYPE</code>,
+                    <code>REGION_RATING_CLIENT</code> e
+                    <code>ORGANIZATION_TYPE</code>.
+                </p>
+
+                <h3>Variáveis derivadas da base principal</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Campo criado</th>
+                            <th>Cálculo</th>
+                            <th>Interpretação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>AGE_YEARS</code></td>
+                            <td><code>abs(DAYS_BIRTH) / 365.25</code></td>
+                            <td>Idade aproximada do cliente em anos.</td>
+                        </tr>
+                        <tr>
+                            <td><code>CREDIT_INCOME_RATIO</code></td>
+                            <td><code>AMT_CREDIT / AMT_INCOME_TOTAL</code></td>
+                            <td>
+                                Peso do crédito em relação à renda declarada.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="agregacoes">
+                <h2>4. Agregações realizadas</h2>
+                <p>
+                    A etapa de agregação foi necessária porque as bases
+                    auxiliares possuíam múltiplas linhas por cliente. A
+                    agregação por <code>SK_ID_CURR</code>
+                    transformou cada histórico em um conjunto de indicadores
+                    sintéticos. Depois disso, a junção com a base principal pôde
+                    ser feita sem multiplicar registros.
+                </p>
+
+                <div class="two-col">
+                    <div>
+                        <h3>4.1 Agregações sobre a base Serasa</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Campo gerado</th>
+                                    <th>Origem / função</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>SER_QTDE_EMPRESTIMOS</code></td>
+                                    <td>
+                                        Contagem de <code>SK_ID_BUREAU</code>.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>SER_DIVIDA_ATRASADA</code></td>
+                                    <td>
+                                        Soma de
+                                        <code>AMT_CREDIT_SUM_OVERDUE</code>.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>SER_CREDITOS_ATIVOS</code></td>
+                                    <td>
+                                        Contagem de créditos com
+                                        <code>CREDIT_ACTIVE = Active</code>.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>SER_DAYS_CREDIT_MEDIO</code></td>
+                                    <td>Média de <code>DAYS_CREDIT</code>.</td>
+                                </tr>
+                                <tr>
+                                    <td><code>SER_DIAS_ATRASO_MAX</code></td>
+                                    <td>
+                                        Máximo de
+                                        <code>CREDIT_DAY_OVERDUE</code>.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>SER_CREDITO_TOTAL</code></td>
+                                    <td>
+                                        Soma de <code>AMT_CREDIT_SUM</code>.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>SER_DIVIDA_TOTAL</code></td>
+                                    <td>
+                                        Soma de
+                                        <code>AMT_CREDIT_SUM_DEBT</code>.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>SER_MAX_OVERDUE</code></td>
+                                    <td>
+                                        Máximo de
+                                        <code>AMT_CREDIT_MAX_OVERDUE</code>.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>SER_QTDE_PRORROGACOES</code></td>
+                                    <td>
+                                        Soma de <code>CNT_CREDIT_PROLONG</code>.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h3>4.2 Agregações sobre o histórico interno</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Campo gerado</th>
+                                    <th>Origem / função</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>PREV_QTDE_TENTATIVAS</code></td>
+                                    <td>
+                                        Contagem de <code>SK_ID_PREV</code>.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>PREV_QTDE_REJEITADAS</code></td>
+                                    <td>
+                                        Contagem de contratos com status
+                                        <code>Refused</code>.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>PREV_TAXA_REJEICAO</code></td>
+                                    <td>
+                                        <code
+                                            >PREV_QTDE_REJEITADAS /
+                                            PREV_QTDE_TENTATIVAS</code
+                                        >.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code>PREV_VALOR_SOLICITADO_TOTAL</code>
+                                    </td>
+                                    <td>
+                                        Soma de <code>AMT_APPLICATION</code>.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code>PREV_VALOR_APROVADO_TOTAL</code>
+                                    </td>
+                                    <td>Soma de <code>AMT_CREDIT</code>.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code
+                                            >PREV_RAZAO_APROVADO_SOLICITADO</code
+                                        >
+                                    </td>
+                                    <td>
+                                        Razão entre valor aprovado e solicitado.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>PREV_QTDE_COM_SEGURO</code></td>
+                                    <td>Soma de solicitações com seguro.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code>PREV_QTDE_CLIENTE_REPETIDOR</code>
+                                    </td>
+                                    <td>
+                                        Contagem de cliente do tipo
+                                        <code>Repeater</code>.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>PREV_QTDE_CANCELADO</code></td>
+                                    <td>Contagem de contratos cancelados.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="base-final">
+                <h2>5. Construção da base final</h2>
+                <p>
+                    A base final foi construída com a base de empréstimos como
+                    âncora. As bases Serasa e empréstimos anteriores foram
+                    agregadas separadamente e, em seguida, unidas à base
+                    principal por meio de junções à esquerda (<code
+                        >left join</code
+                    >). Essa decisão preservou todos os 307.511 registros da
+                    base principal.
+                </p>
+
+                <ol>
+                    <li>
+                        Leitura dos campos selecionados da base
+                        <code>emprestimos.csv</code>.
+                    </li>
+                    <li>
+                        Agregação da base <code>serasa.csv</code> por
+                        <code>SK_ID_CURR</code>.
+                    </li>
+                    <li>
+                        Agregação da base
+                        <code>emprestimos_anteriores.csv</code> por
+                        <code>SK_ID_CURR</code>.
+                    </li>
+                    <li>Junção das bases agregadas com a base principal.</li>
+                    <li>
+                        Criação de <code>AGE_YEARS</code> e
+                        <code>CREDIT_INCOME_RATIO</code>.
+                    </li>
+                    <li>Tratamento de valores ausentes.</li>
+                    <li>Codificação das variáveis categóricas.</li>
+                    <li>Exportação da base final e da base com métrica.</li>
+                    <li>
+                        Criação do banco SQLite com a tabela
+                        <code>base_final_metrica</code>.
+                    </li>
+                </ol>
+
+                <h3>Estrutura final</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Grupo</th>
+                            <th>Campos</th>
+                            <th>Tratamento</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Identificação</td>
+                            <td><code>SK_ID_CURR</code></td>
+                            <td>Chave primária mantida na base final.</td>
+                        </tr>
+                        <tr>
+                            <td>Alvo</td>
+                            <td><code>TARGET</code></td>
+                            <td>Variável alvo preservada sem alteração.</td>
+                        </tr>
+                        <tr>
+                            <td>Demográficas e financeiras</td>
+                            <td>
+                                Renda, crédito, idade, filhos, região, contatos
+                                e scores externos.
+                            </td>
+                            <td>
+                                Seleção direta, transformação de idade, razão
+                                crédito/renda e imputação pela mediana quando
+                                necessário.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Categóricas</td>
+                            <td>
+                                Gênero, carro, imóvel, escolaridade, renda,
+                                moradia, ocupação e organização.
+                            </td>
+                            <td>
+                                Preenchimento com <code>Unknown</code> e
+                                codificação em números com dicionário.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Serasa</td>
+                            <td>
+                                Contagens, somas, médias e máximos do histórico
+                                externo.
+                            </td>
+                            <td>
+                                Agregação por cliente e preenchimento de
+                                ausentes com zero.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Empréstimos anteriores</td>
+                            <td>
+                                Tentativas, rejeições, taxa de rejeição, valores
+                                e indicadores internos.
+                            </td>
+                            <td>
+                                Agregação por cliente e preenchimento de
+                                ausentes com zero.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="desbalanceamento">
+                <h2>6. Tratamentos aplicados e desbalanceamento</h2>
+                <p>
+                    O tratamento foi feito com regras simples e justificáveis,
+                    adequadas ao objetivo de pré-processamento. A base final
+                    ficou sem valores ausentes, com categorias codificadas e com
+                    dicionário de mapeamento salvo.
+                </p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Problema</th>
+                            <th>Solução aplicada</th>
+                            <th>Motivo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cliente sem histórico Serasa ou interno</td>
+                            <td>Campos agregados preenchidos com zero.</td>
+                            <td>
+                                Ausência de registro foi interpretada como
+                                ausência de evento anterior.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ausentes numéricos da base principal</td>
+                            <td>Imputação pela mediana.</td>
+                            <td>
+                                A mediana é menos sensível a outliers do que a
+                                média.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ausentes categóricos</td>
+                            <td>Categoria <code>Unknown</code>.</td>
+                            <td>
+                                Preserva a informação de ausência como uma
+                                categoria própria.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Texto em variáveis categóricas</td>
+                            <td>
+                                Codificação numérica e dicionário de categorias.
+                            </td>
+                            <td>
+                                Permite uso em modelos e mantém rastreabilidade.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Distribuição da variável alvo</h3>
+                <p>
+                    A variável <code>TARGET</code> apresentou forte
+                    desbalanceamento. A classe saudável é dominante, enquanto a
+                    classe de risco representa uma parcela menor da base.
+                </p>
+
+                <div class="bar-row">
+                    <span>TARGET 0 - Saudável</span>
+                    <div class="bar-track">
+                        <div class="bar green" style="width: 91.93%"></div>
+                    </div>
+                    <span>282.686 (91,93%)</span>
+                </div>
+                <div class="bar-row">
+                    <span>TARGET 1 - Risco</span>
+                    <div class="bar-track">
+                        <div class="bar red" style="width: 8.07%"></div>
+                    </div>
+                    <span>24.825 (8,07%)</span>
+                </div>
+
+                <div class="callout warning">
+                    <strong>Cuidado metodológico:</strong> a base final não foi
+                    balanceada artificialmente, pois o objetivo desta entrega é
+                    pré-processamento e documentação. Em uma etapa futura de
+                    modelagem, técnicas de balanceamento devem ser aplicadas
+                    somente no conjunto de treino, para evitar vazamento de
+                    informação.
+                </div>
+            </section>
+
+            <section id="metrica">
+                <h2>7. Métrica customizada de risco</h2>
+                <p>
+                    Foi criada uma métrica de risco de 0 a 100 em uma cópia da
+                    base final, preservando a base preprocessada original. A
+                    métrica combina 10 campos finais, com normalização robusta e
+                    pesos definidos manualmente.
+                </p>
+                <p>
+                    A normalização robusta usa os percentis 1% e 99%, reduzindo
+                    a influência de valores extremos. Campos em que valores
+                    maiores indicam menor risco, como renda e scores externos,
+                    tiveram a escala invertida.
+                </p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Campo</th>
+                            <th>Peso</th>
+                            <th>Sentido na métrica</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>AMT_INCOME_TOTAL</code></td>
+                            <td>0,08</td>
+                            <td>Invertido: renda maior reduz risco.</td>
+                        </tr>
+                        <tr>
+                            <td><code>AMT_CREDIT</code></td>
+                            <td>0,08</td>
+                            <td>Direto: crédito maior aumenta risco.</td>
+                        </tr>
+                        <tr>
+                            <td><code>CREDIT_INCOME_RATIO</code></td>
+                            <td>0,15</td>
+                            <td>Direto: crédito/renda maior aumenta risco.</td>
+                        </tr>
+                        <tr>
+                            <td><code>EXT_SOURCE_1</code></td>
+                            <td>0,10</td>
+                            <td>Invertido: score maior reduz risco.</td>
+                        </tr>
+                        <tr>
+                            <td><code>EXT_SOURCE_2</code></td>
+                            <td>0,15</td>
+                            <td>Invertido: score maior reduz risco.</td>
+                        </tr>
+                        <tr>
+                            <td><code>EXT_SOURCE_3</code></td>
+                            <td>0,15</td>
+                            <td>Invertido: score maior reduz risco.</td>
+                        </tr>
+                        <tr>
+                            <td><code>SER_QTDE_EMPRESTIMOS</code></td>
+                            <td>0,02</td>
+                            <td>Direto: mais empréstimos aumentam risco.</td>
+                        </tr>
+                        <tr>
+                            <td><code>SER_DIVIDA_ATRASADA</code></td>
+                            <td>0,12</td>
+                            <td>Direto: dívida atrasada aumenta risco.</td>
+                        </tr>
+                        <tr>
+                            <td><code>SER_CREDITOS_ATIVOS</code></td>
+                            <td>0,03</td>
+                            <td>Direto: créditos ativos aumentam risco.</td>
+                        </tr>
+                        <tr>
+                            <td><code>PREV_TAXA_REJEICAO</code></td>
+                            <td>0,12</td>
+                            <td>
+                                Direto: maior taxa de rejeição aumenta risco.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="grid cards">
+                    <div class="metric-card">
+                        <strong>3,71</strong><span>menor valor observado</span>
+                    </div>
+                    <div class="metric-card">
+                        <strong>31,53</strong><span>média da métrica</span>
+                    </div>
+                    <div class="metric-card">
+                        <strong>30,88</strong><span>mediana da métrica</span>
+                    </div>
+                    <div class="metric-card">
+                        <strong>80,91</strong><span>maior valor observado</span>
+                    </div>
+                </div>
+
+                <h3>Faixas da métrica</h3>
+                <div class="bar-row">
+                    <span>Baixo</span>
+                    <div class="bar-track">
+                        <div class="bar green" style="width: 59.71%"></div>
+                    </div>
+                    <span>183.602 (59,71%)</span>
+                </div>
+                <div class="bar-row">
+                    <span>Médio</span>
+                    <div class="bar-track">
+                        <div class="bar amber" style="width: 40.23%"></div>
+                    </div>
+                    <span>123.726 (40,23%)</span>
+                </div>
+                <div class="bar-row">
+                    <span>Alto</span>
+                    <div class="bar-track">
+                        <div class="bar red" style="width: 0.06%"></div>
+                    </div>
+                    <span>183 (0,06%)</span>
+                </div>
+
+                <h3>Avaliação complementar com estatística de Hopkins</h3>
+                <p>
+                    Como verificação adicional, foi calculada a estatística de
+                    Hopkins sobre uma amostra da base final usando os 10 campos
+                    da métrica. Essa estatística mede se os dados apresentam
+                    tendência de agrupamento, comparando a distribuição dos
+                    pontos reais com pontos artificiais gerados aleatoriamente.
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Métrica</th>
+                            <th>Valor obtido</th>
+                            <th>Interpretação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Estatística de Hopkins</td>
+                            <td>0,8450</td>
+                            <td>
+                                Valor acima de 0,75, indicando forte tendência de
+                                agrupamento nos campos avaliados.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="callout">
+                    A estatística de Hopkins era opcional no enunciado. Ela foi
+                    incluída como melhoria adicional para reforçar a análise de
+                    qualidade da base final.
+                </div>
+            </section>
+
+            <section id="resultados">
+                <h2>8. Resultados e discussão</h2>
+                <p>
+                    A validação final confirmou que o processo manteve a
+                    integridade da base principal e gerou arquivos consistentes.
+                    A base final possui uma única linha por
+                    <code>SK_ID_CURR</code>, não apresenta valores ausentes e
+                    possui apenas campos selecionados ou derivados.
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Conferência</th>
+                            <th>Resultado</th>
+                            <th>Interpretação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Registros na base final</td>
+                            <td>307.511</td>
+                            <td>
+                                Todos os registros da base principal foram
+                                preservados.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Registros na base com métrica</td>
+                            <td>307.511</td>
+                            <td>
+                                A métrica foi aplicada em uma cópia completa da
+                                base final.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Registros no SQLite</td>
+                            <td>307.511</td>
+                            <td>
+                                O banco contém a mesma quantidade de linhas do
+                                CSV final.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Duplicidade em <code>SK_ID_CURR</code></td>
+                            <td>0</td>
+                            <td>
+                                Cada cliente permaneceu com uma única linha.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Valores ausentes após tratamento</td>
+                            <td>0</td>
+                            <td>
+                                A base está pronta para uso em modelos que não
+                                aceitam nulos.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Colunas na base final</td>
+                            <td>41</td>
+                            <td>Campos selecionados, agregados e derivados.</td>
+                        </tr>
+                        <tr>
+                            <td>Colunas na base com métrica</td>
+                            <td>43</td>
+                            <td>
+                                Inclui <code>METRICA_RISCO_0_100</code> e
+                                <code>CLASSE_METRICA</code>.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="entrega">
+                <h2>9. Arquivos finais da entrega</h2>
+                <p>
+                    A entrega foi organizada para permitir reprodutibilidade: os
+                    arquivos originais foram mantidos, as bases finais foram
+                    salvas, o código-fonte foi incluído e os comandos SQL foram
+                    documentados.
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Arquivo</th>
+                            <th>Finalidade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>emprestimos.csv</code></td>
+                            <td>Fonte original principal.</td>
+                        </tr>
+                        <tr>
+                            <td><code>serasa.csv</code></td>
+                            <td>Fonte original de histórico externo.</td>
+                        </tr>
+                        <tr>
+                            <td><code>emprestimos_anteriores.csv</code></td>
+                            <td>Fonte original de histórico interno.</td>
+                        </tr>
+                        <tr>
+                            <td><code>base_final_preprocessada.csv</code></td>
+                            <td>
+                                Base principal da entrega. Contém os 307.511
+                                registros finais, com os campos selecionados da
+                                base de empréstimos, as agregações do Serasa e
+                                do histórico interno, valores ausentes tratados
+                                e variáveis categóricas codificadas.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>base_final_com_metrica.csv</code></td>
+                            <td>
+                                Cópia da base final usada como área de trabalho
+                                para a métrica. Além das colunas da base
+                                preprocessada, inclui
+                                <code>METRICA_RISCO_0_100</code> e
+                                <code>CLASSE_METRICA</code>.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code
+                                    >dicionario_codificacao_categorias.csv</code
+                                >
+                            </td>
+                            <td>
+                                Arquivo de rastreabilidade da codificação. Mostra
+                                qual código numérico foi atribuído para cada
+                                categoria textual, como escolaridade, ocupação,
+                                tipo de renda, moradia e organização.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code
+                                    >resumo_estatistico_preprocessamento.csv</code
+                                >
+                            </td>
+                            <td>
+                                Resumo legível em tabela. Reúne quantidade de
+                                linhas, distribuição do <code>TARGET</code>,
+                                valores ausentes antes do tratamento, estatísticas
+                                da métrica, faixas de risco e estatística de
+                                Hopkins.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>resumo_processamento.json</code></td>
+                            <td>
+                                Versão estruturada do resumo, em formato JSON.
+                                Serve para auditoria técnica, conferência
+                                automática e consulta rápida dos parâmetros,
+                                colunas finais, pesos da métrica e resultados.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>preprocessamento_credito.py</code></td>
+                            <td>
+                                Código-fonte principal do pré-processamento.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>preprocessamento_credito.db</code></td>
+                            <td>
+                                Banco SQLite gerado ao final do processo. Contém
+                                a tabela <code>base_final_metrica</code>, criada
+                                a partir da base com métrica, permitindo consultar
+                                os resultados com comandos SQL.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>sqlite_comandos.sql</code></td>
+                            <td>Comandos SQL de importação e conferência.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>relatorio_preprocessamento.docx</code>
+                            </td>
+                            <td>Relatório formal.</td>
+                        </tr>
+                        <tr>
+                            <td><code>apendice_consultas_llm.md</code></td>
+                            <td>Registro das consultas feitas à LLM.</td>
+                        </tr>
+                        <tr>
+                            <td><code>app.py</code></td>
+                            <td>
+                                Aplicativo Streamlit opcional para rodar o
+                                processamento pela web.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>requirements.txt</code></td>
+                            <td>Dependências do projeto.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Banco de dados</h3>
+                <p>
+                    O SGBD utilizado foi SQLite 3. O banco gerado é
+                    <code>preprocessamento_credito.db</code>, contendo a tabela
+                    <code>base_final_metrica</code>.
+                </p>
+                <pre><code>SELECT COUNT(*) AS total_registros FROM base_final_metrica;
+SELECT TARGET, COUNT(*) AS quantidade FROM base_final_metrica GROUP BY TARGET;
+SELECT CLASSE_METRICA, COUNT(*) AS quantidade FROM base_final_metrica GROUP BY CLASSE_METRICA;</code></pre>
+            </section>
+
+            <section id="referencias">
+                <h2>10. Referências e apêndices</h2>
+                <h3>Referências</h3>
+                <ul>
+                    <li>Documentação oficial do Python.</li>
+                    <li>Documentação oficial da biblioteca pandas.</li>
+                    <li>Documentação oficial do SQLite.</li>
+                    <li>
+                        Bases fornecidas na atividade de Ciência de Dados:
+                        <code>emprestimos.csv</code>, <code>serasa.csv</code> e
+                        <code>emprestimos_anteriores.csv</code>.
+                    </li>
+                </ul>
+
+                <h3>Apêndices entregues</h3>
+                <ul>
+                    <li>
+                        Ambiente, gerenciador SQLite e comandos SQL:
+                        <code>sqlite_comandos.sql</code>.
+                    </li>
+                    <li>
+                        Código-fonte completo:
+                        <code>preprocessamento_credito.py</code> e
+                        <code>app.py</code>.
+                    </li>
+                    <li>
+                        Consultas feitas à LLM:
+                        <code>apendice_consultas_llm.md</code>.
+                    </li>
+                    <li>
+                        Relatório formal:
+                        <code>relatorio_preprocessamento.docx</code>.
+                    </li>
+                </ul>
+            </section>
+
+            <section id="conclusao">
+                <h2>11. Conclusão</h2>
+                <p>
+                    O pré-processamento realizado cumpriu o objetivo do
+                    trabalho: transformar três bases de dados separadas em uma
+                    base final única, consistente, documentada e adequada para
+                    uso futuro em Machine Learning. A base final manteve todos
+                    os registros da base principal, recebeu agregações das bases
+                    auxiliares e ficou sem valores ausentes.
+                </p>
+                <p>
+                    Também foram documentados o desbalanceamento da variável
+                    alvo, a codificação das variáveis categóricas, a criação da
+                    métrica de risco e os arquivos finais necessários para
+                    reprodução do processo. O trabalho demonstra, de forma
+                    simples e reprodutível, as principais decisões de
+                    pré-processamento aplicadas a um problema de concessão de
+                    crédito.
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            <div class="wrap">
+                Relatório HTML gerado para apoio à apresentação do trabalho de
+                Ciência de Dados - Pré-processamento.
+            </div>
+        </footer>
+    </body>
+</html>

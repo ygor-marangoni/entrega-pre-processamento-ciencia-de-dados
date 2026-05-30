@@ -1,0 +1,12 @@
+emprestimos_anteriores.csv
+serasa.csv
+emprestimos.csv
+
+preprocessamento_credito.db
+*.db
+*.sqlite
+*.sqlite3
+
+__pycache__/
+*.pyc
+.venv/

@@ -1,0 +1,155 @@
+{
+  "linhas_base_principal": 307511,
+  "linhas_base_final": 307511,
+  "target_counts": {
+    "0": 282686,
+    "1": 24825
+  },
+  "serasa_clientes_agregados": 305811,
+  "emprestimos_anteriores_clientes_agregados": 338857,
+  "missing_before": {
+    "OCCUPATION_TYPE": 96391,
+    "EXT_SOURCE_1": 173378,
+    "EXT_SOURCE_2": 660,
+    "EXT_SOURCE_3": 60965,
+    "SER_QTDE_EMPRESTIMOS": 44020,
+    "SER_DIVIDA_ATRASADA": 44020,
+    "SER_CREDITOS_ATIVOS": 44020,
+    "SER_DAYS_CREDIT_MEDIO": 44020,
+    "SER_DIAS_ATRASO_MAX": 44020,
+    "SER_CREDITO_TOTAL": 44020,
+    "SER_DIVIDA_TOTAL": 44020,
+    "SER_MAX_OVERDUE": 123625,
+    "SER_QTDE_PRORROGACOES": 44020,
+    "PREV_QTDE_TENTATIVAS": 16454,
+    "PREV_QTDE_REJEITADAS": 16454,
+    "PREV_VALOR_SOLICITADO_TOTAL": 16454,
+    "PREV_VALOR_APROVADO_TOTAL": 16454,
+    "PREV_QTDE_COM_SEGURO": 16454,
+    "PREV_QTDE_CLIENTE_REPETIDOR": 16454,
+    "PREV_QTDE_CANCELADO": 16454,
+    "PREV_TAXA_REJEICAO": 16454,
+    "PREV_RAZAO_APROVADO_SOLICITADO": 16454
+  },
+  "metric_bounds": {
+    "AMT_INCOME_TOTAL": {
+      "p01": 45000.0,
+      "p99": 472500.0,
+      "inverse": true,
+      "weight": 0.08
+    },
+    "AMT_CREDIT": {
+      "p01": 76410.0,
+      "p99": 1854000.0,
+      "inverse": false,
+      "weight": 0.08
+    },
+    "CREDIT_INCOME_RATIO": {
+      "p01": 0.595365,
+      "p99": 13.02727990000002,
+      "inverse": false,
+      "weight": 0.15
+    },
+    "EXT_SOURCE_1": {
+      "p01": 0.1162569,
+      "p99": 0.8661069000000005,
+      "inverse": true,
+      "weight": 0.1
+    },
+    "EXT_SOURCE_2": {
+      "p01": 0.0295502,
+      "p99": 0.7827666000000001,
+      "inverse": true,
+      "weight": 0.15
+    },
+    "EXT_SOURCE_3": {
+      "p01": 0.073473,
+      "p99": 0.832785,
+      "inverse": true,
+      "weight": 0.15
+    },
+    "SER_QTDE_EMPRESTIMOS": {
+      "p01": 0.0,
+      "p99": 20.0,
+      "inverse": false,
+      "weight": 0.02
+    },
+    "SER_DIVIDA_ATRASADA": {
+      "p01": 0.0,
+      "p99": 4.5,
+      "inverse": false,
+      "weight": 0.12
+    },
+    "SER_CREDITOS_ATIVOS": {
+      "p01": 0.0,
+      "p99": 8.0,
+      "inverse": false,
+      "weight": 0.03
+    },
+    "PREV_TAXA_REJEICAO": {
+      "p01": 0.0,
+      "p99": 0.714286,
+      "inverse": false,
+      "weight": 0.12
+    }
+  },
+  "metric_summary": {
+    "count": 307511.0,
+    "mean": 31.52933843016998,
+    "std": 8.441271847858642,
+    "min": 3.71,
+    "25%": 25.45,
+    "50%": 30.88,
+    "75%": 36.86,
+    "max": 80.91
+  },
+  "hopkins_statistic": 0.845039371249001,
+  "risk_bands": {
+    "Alto": 183,
+    "Baixo": 183602,
+    "Medio": 123726
+  },
+  "final_columns": [
+    "SK_ID_CURR",
+    "TARGET",
+    "CNT_CHILDREN",
+    "AMT_INCOME_TOTAL",
+    "AMT_CREDIT",
+    "AGE_YEARS",
+    "FLAG_MOBIL",
+    "FLAG_EMP_PHONE",
+    "FLAG_EMAIL",
+    "REGION_RATING_CLIENT",
+    "EXT_SOURCE_1",
+    "EXT_SOURCE_2",
+    "EXT_SOURCE_3",
+    "CREDIT_INCOME_RATIO",
+    "CODE_GENDER_COD",
+    "FLAG_OWN_CAR_COD",
+    "FLAG_OWN_REALTY_COD",
+    "NAME_INCOME_TYPE_COD",
+    "NAME_EDUCATION_TYPE_COD",
+    "NAME_FAMILY_STATUS_COD",
+    "NAME_HOUSING_TYPE_COD",
+    "OCCUPATION_TYPE_COD",
+    "ORGANIZATION_TYPE_COD",
+    "SER_QTDE_EMPRESTIMOS",
+    "SER_DIVIDA_ATRASADA",
+    "SER_CREDITOS_ATIVOS",
+    "SER_DAYS_CREDIT_MEDIO",
+    "SER_DIAS_ATRASO_MAX",
+    "SER_CREDITO_TOTAL",
+    "SER_DIVIDA_TOTAL",
+    "SER_MAX_OVERDUE",
+    "SER_QTDE_PRORROGACOES",
+    "PREV_QTDE_TENTATIVAS",
+    "PREV_QTDE_REJEITADAS",
+    "PREV_TAXA_REJEICAO",
+    "PREV_VALOR_SOLICITADO_TOTAL",
+    "PREV_VALOR_APROVADO_TOTAL",
+    "PREV_RAZAO_APROVADO_SOLICITADO",
+    "PREV_QTDE_COM_SEGURO",
+    "PREV_QTDE_CLIENTE_REPETIDOR",
+    "PREV_QTDE_CANCELADO"
+  ]
+}

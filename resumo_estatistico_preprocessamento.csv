@@ -1,0 +1,41 @@
+GRUPO;ITEM;VALOR
+Linhas;Base principal;307511
+Linhas;Base final;307511
+Agregacao;Clientes com registros no Serasa;305811
+Agregacao;Clientes com emprestimos anteriores;338857
+TARGET;Classe 0;282686 (91.93%)
+TARGET;Classe 1;24825 (8.07%)
+Ausentes antes;EXT_SOURCE_1;173378 (56.38%)
+Ausentes antes;EXT_SOURCE_2;660 (0.21%)
+Ausentes antes;EXT_SOURCE_3;60965 (19.83%)
+Ausentes antes;OCCUPATION_TYPE;96391 (31.35%)
+Ausentes antes;PREV_QTDE_CANCELADO;16454 (5.35%)
+Ausentes antes;PREV_QTDE_CLIENTE_REPETIDOR;16454 (5.35%)
+Ausentes antes;PREV_QTDE_COM_SEGURO;16454 (5.35%)
+Ausentes antes;PREV_QTDE_REJEITADAS;16454 (5.35%)
+Ausentes antes;PREV_QTDE_TENTATIVAS;16454 (5.35%)
+Ausentes antes;PREV_RAZAO_APROVADO_SOLICITADO;16454 (5.35%)
+Ausentes antes;PREV_TAXA_REJEICAO;16454 (5.35%)
+Ausentes antes;PREV_VALOR_APROVADO_TOTAL;16454 (5.35%)
+Ausentes antes;PREV_VALOR_SOLICITADO_TOTAL;16454 (5.35%)
+Ausentes antes;SER_CREDITOS_ATIVOS;44020 (14.31%)
+Ausentes antes;SER_CREDITO_TOTAL;44020 (14.31%)
+Ausentes antes;SER_DAYS_CREDIT_MEDIO;44020 (14.31%)
+Ausentes antes;SER_DIAS_ATRASO_MAX;44020 (14.31%)
+Ausentes antes;SER_DIVIDA_ATRASADA;44020 (14.31%)
+Ausentes antes;SER_DIVIDA_TOTAL;44020 (14.31%)
+Ausentes antes;SER_MAX_OVERDUE;123625 (40.20%)
+Ausentes antes;SER_QTDE_EMPRESTIMOS;44020 (14.31%)
+Ausentes antes;SER_QTDE_PRORROGACOES;44020 (14.31%)
+Metrica;count;307511.0
+Metrica;mean;31.5293
+Metrica;std;8.4413
+Metrica;min;3.71
+Metrica;25%;25.45
+Metrica;50%;30.88
+Metrica;75%;36.86
+Metrica;max;80.91
+Faixa da metrica;Alto;183 (0.06%)
+Faixa da metrica;Baixo;183602 (59.71%)
+Faixa da metrica;Medio;123726 (40.23%)
+Qualidade;Estatistica de Hopkins;0.845
