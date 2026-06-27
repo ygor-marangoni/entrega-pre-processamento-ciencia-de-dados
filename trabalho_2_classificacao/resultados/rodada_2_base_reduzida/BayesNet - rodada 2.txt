@@ -1,0 +1,107 @@
+﻿Status da execucao: OK
+Metodo: BayesNet
+Classe WEKA: weka.classifiers.bayes.BayesNet
+Base usada: C:\Users\drz\Desktop\Faculdade\CD\entrega_preprocessamento_ciencia_dados\trabalho_2_classificacao\data\base_weka_reduzida.arff
+Validacao cruzada: sim
+Numero de folds: 10
+Seed: 42
+Memoria maxima Java: 6g
+Configuracao: ajustada: -D, K2 -P 1 -S BAYES, SimpleEstimator -A 1.0
+Inicio: 2026-06-26 11:31:13
+Tempo medido pelo script: 38,74 segundos
+Comando:
+java -Xmx6g -cp "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.bayes.BayesNet -t C:\Users\drz\Desktop\Faculdade\CD\entrega_preprocessamento_ciencia_dados\trabalho_2_classificacao\data\base_weka_reduzida.arff -x 10 -s 42 -c last -D -Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 1.0
+
+Saida completa do WEKA:
+
+Options: -D -Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 1.0 
+
+=== Classifier model (full training set) ===
+
+Bayes Network Classifier
+not using ADTree
+#attributes=16 #classindex=15
+Network structure (nodes followed by parents)
+SER_DIVIDA_ATRASADA(3): TARGET 
+EXT_SOURCE_3(13): TARGET 
+SER_QTDE_PRORROGACOES(1): TARGET 
+EXT_SOURCE_2(10): TARGET 
+FLAG_OWN_CAR_COD(2): TARGET 
+PREV_QTDE_CANCELADO(2): TARGET 
+SER_CREDITOS_ATIVOS(4): TARGET 
+EXT_SOURCE_1(10): TARGET 
+FLAG_EMP_PHONE(2): TARGET 
+CNT_CHILDREN(2): TARGET 
+REGION_RATING_CLIENT(3): TARGET 
+NAME_HOUSING_TYPE_COD(2): TARGET 
+CODE_GENDER_COD(2): TARGET 
+ORGANIZATION_TYPE_COD(5): TARGET 
+FLAG_EMAIL(1): TARGET 
+TARGET(2): 
+LogScore Bayes: -3715231.0259338915
+LogScore BDeu: -3715614.2984626223
+LogScore MDL: -3715629.767552589
+LogScore ENTROPY: -3715029.5449110363
+LogScore AIC: -3715124.5449110363
+
+
+Time taken to build model: 4.22 seconds
+
+Time taken to test model on training data: 1.06 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances      281482               91.5356 %
+Incorrectly Classified Instances     26029                8.4644 %
+Kappa statistic                          0.0937
+Mean absolute error                      0.1432
+Root mean squared error                  0.2678
+Relative absolute error                 96.4515 %
+Root relative squared error             98.3103 %
+Total Number of Instances           307511     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,990    0,931    0,924      0,990    0,956      0,132    0,728     0,964     0
+                 0,069    0,010    0,370      0,069    0,117      0,132    0,728     0,209     1
+Weighted Avg.    0,915    0,856    0,879      0,915    0,888      0,132    0,728     0,903     
+
+
+=== Confusion Matrix ===
+
+      a      b   <-- classified as
+ 279761   2925 |      a = 0
+  23104   1721 |      b = 1
+
+Time taken to perform cross-validation: 30.25 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances      281399               91.5086 %
+Incorrectly Classified Instances     26112                8.4914 %
+Kappa statistic                          0.0908
+Mean absolute error                      0.1434
+Root mean squared error                  0.2682
+Relative absolute error                 96.5814 %
+Root relative squared error             98.4482 %
+Total Number of Instances           307511     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,990    0,932    0,924      0,990    0,955      0,128    0,726     0,963     0
+                 0,068    0,010    0,361      0,068    0,114      0,128    0,726     0,206     1
+Weighted Avg.    0,915    0,858    0,878      0,915    0,887      0,128    0,726     0,902     
+
+
+=== Confusion Matrix ===
+
+      a      b   <-- classified as
+ 279721   2965 |      a = 0
+  23147   1678 |      b = 1
+
+

@@ -1,0 +1,131 @@
+﻿Status da execucao: OK
+Metodo: BayesNet_retry
+Classe WEKA: weka.classifiers.bayes.BayesNet
+Base usada: C:\Users\drz\Desktop\Faculdade\CD\entrega_preprocessamento_ciencia_dados\trabalho_2_classificacao\data\base_weka_completa.arff
+Validacao cruzada: sim
+Numero de folds: 10
+Seed: 42
+Memoria maxima Java: 6g
+Configuracao ajustada: -D -Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 1.0
+Inicio: 2026-06-26 11:17:45
+Tempo medido pelo script: 179,30 segundos
+Comando:
+java -Xmx6g -cp "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.bayes.BayesNet -t C:\Users\drz\Desktop\Faculdade\CD\entrega_preprocessamento_ciencia_dados\trabalho_2_classificacao\data\base_weka_completa.arff -x 10 -s 42 -c last -D -Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 1.0
+
+Saida completa do WEKA:
+
+Options: -D -Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 1.0 
+
+=== Classifier model (full training set) ===
+
+Bayes Network Classifier
+not using ADTree
+#attributes=40 #classindex=39
+Network structure (nodes followed by parents)
+CNT_CHILDREN(2): TARGET 
+AMT_INCOME_TOTAL(2): TARGET 
+AMT_CREDIT(8): TARGET 
+AGE_YEARS(7): TARGET 
+FLAG_MOBIL(1): TARGET 
+FLAG_EMP_PHONE(2): TARGET 
+FLAG_EMAIL(1): TARGET 
+REGION_RATING_CLIENT(3): TARGET 
+EXT_SOURCE_1(10): TARGET 
+EXT_SOURCE_2(10): TARGET 
+EXT_SOURCE_3(13): TARGET 
+CREDIT_INCOME_RATIO(5): TARGET 
+CODE_GENDER_COD(2): TARGET 
+FLAG_OWN_CAR_COD(2): TARGET 
+FLAG_OWN_REALTY_COD(1): TARGET 
+NAME_INCOME_TYPE_COD(3): TARGET 
+NAME_EDUCATION_TYPE_COD(2): TARGET 
+NAME_FAMILY_STATUS_COD(4): TARGET 
+NAME_HOUSING_TYPE_COD(2): TARGET 
+OCCUPATION_TYPE_COD(10): TARGET 
+ORGANIZATION_TYPE_COD(5): TARGET 
+SER_QTDE_EMPRESTIMOS(4): TARGET 
+SER_DIVIDA_ATRASADA(3): TARGET 
+SER_CREDITOS_ATIVOS(4): TARGET 
+SER_DAYS_CREDIT_MEDIO(7): TARGET 
+SER_DIAS_ATRASO_MAX(3): TARGET 
+SER_CREDITO_TOTAL(3): TARGET 
+SER_DIVIDA_TOTAL(3): TARGET 
+SER_MAX_OVERDUE(2): TARGET 
+SER_QTDE_PRORROGACOES(1): TARGET 
+PREV_QTDE_TENTATIVAS(4): TARGET 
+PREV_QTDE_REJEITADAS(5): TARGET 
+PREV_TAXA_REJEICAO(5): TARGET 
+PREV_VALOR_SOLICITADO_TOTAL(4): TARGET 
+PREV_VALOR_APROVADO_TOTAL(4): TARGET 
+PREV_RAZAO_APROVADO_SOLICITADO(5): TARGET 
+PREV_QTDE_COM_SEGURO(2): TARGET 
+PREV_QTDE_CLIENTE_REPETIDOR(2): TARGET 
+PREV_QTDE_CANCELADO(2): TARGET 
+TARGET(2): 
+LogScore Bayes: -9961276.647864556
+LogScore BDeu: -9962166.50627196
+LogScore MDL: -9962217.341609158
+LogScore ENTROPY: -9960707.307805669
+LogScore AIC: -9960946.307805669
+
+
+Time taken to build model: 13.3 seconds
+
+Time taken to test model on training data: 2.73 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances      271992               88.4495 %
+Incorrectly Classified Instances     35519               11.5505 %
+Kappa statistic                          0.1951
+Mean absolute error                      0.1619
+Root mean squared error                  0.2974
+Relative absolute error                109.089  %
+Root relative squared error            109.1804 %
+Total Number of Instances           307511     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,940    0,752    0,934      0,940    0,937      0,195    0,731     0,964     0
+                 0,248    0,060    0,268      0,248    0,258      0,195    0,731     0,213     1
+Weighted Avg.    0,884    0,696    0,881      0,884    0,883      0,195    0,731     0,903     
+
+
+=== Confusion Matrix ===
+
+      a      b   <-- classified as
+ 265828  16858 |      a = 0
+  18661   6164 |      b = 1
+
+Time taken to perform cross-validation: 153 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances      271867               88.4089 %
+Incorrectly Classified Instances     35644               11.5911 %
+Kappa statistic                          0.1921
+Mean absolute error                      0.1623
+Root mean squared error                  0.2981
+Relative absolute error                109.367  %
+Root relative squared error            109.4242 %
+Total Number of Instances           307511     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,940    0,755    0,934      0,940    0,937      0,192    0,729     0,964     0
+                 0,245    0,060    0,265      0,245    0,255      0,192    0,729     0,210     1
+Weighted Avg.    0,884    0,698    0,880      0,884    0,882      0,192    0,729     0,903     
+
+
+=== Confusion Matrix ===
+
+      a      b   <-- classified as
+ 265773  16913 |      a = 0
+  18731   6094 |      b = 1
+
+

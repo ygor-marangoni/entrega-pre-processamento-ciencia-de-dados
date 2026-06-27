@@ -10,3 +10,8 @@ preprocessamento_credito.db
 __pycache__/
 *.pyc
 .venv/
+
+trabalho_2_classificacao/data/*.csv
+trabalho_2_classificacao/data/*.arff
+trabalho_2_classificacao/resultados/**/*.log
+trabalho_2_classificacao/relatorio/_render_check/

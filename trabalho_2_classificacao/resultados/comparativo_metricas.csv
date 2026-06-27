@@ -1,0 +1,11 @@
+metodo;base;acuracia;tp_rate_classe_1;fp_rate_classe_1;precision_classe_1;recall_classe_1;f_measure_classe_1;roc_area_classe_1;tempo_script_segundos
+J48;Completa;90.6807;0,087;0,021;0,264;0,087;0,131;0,589;6159.08
+RandomForest;Completa;91.9382;0,005;0,000;0,579;0,005;0,010;0,734;8009.70
+IBk;Completa;91.3551;0,035;0,009;0,250;0,035;0,062;0,598;45154.33
+NaiveBayes;Completa;87.8684;0,144;0,057;0,182;0,144;0,160;0,685;57.98
+BayesNet;Completa;88.4089;0,245;0,060;0,265;0,245;0,255;0,729;179.30
+J48;Reduzida;91.8312;0,019;0,003;0,381;0,019;0,036;0,586;2685.57
+RandomForest;Reduzida;91.6273;0,023;0,005;0,276;0,023;0,042;0,687;2943.49
+IBk;Reduzida;91.1701;0,043;0,012;0,239;0,043;0,073;0,602;28690.44
+NaiveBayes;Reduzida;90.4345;0,090;0,024;0,247;0,090;0,132;0,704;21.58
+BayesNet;Reduzida;91.5086;0,068;0,010;0,361;0,068;0,114;0,726;38.74

@@ -1,0 +1,903 @@
+﻿Status da execucao: OK
+Metodo: J48
+Classe WEKA: weka.classifiers.trees.J48
+Base usada: C:\Users\drz\Desktop\Faculdade\CD\entrega_preprocessamento_ciencia_dados\trabalho_2_classificacao\data\base_weka_reduzida.arff
+Validacao cruzada: sim
+Numero de folds: 10
+Seed: 42
+Memoria maxima Java: 6g
+Configuracao: C=0.25, M=2
+Inicio: 2026-06-26 11:32:18
+Tempo medido pelo script: 2.685,57 segundos
+Comando:
+java -Xmx6g -cp "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.trees.J48 -t C:\Users\drz\Desktop\Faculdade\CD\entrega_preprocessamento_ciencia_dados\trabalho_2_classificacao\data\base_weka_reduzida.arff -x 10 -s 42 -c last -C 0.25 -M 2
+
+Saida completa do WEKA:
+
+Options: -C 0.25 -M 2 
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+EXT_SOURCE_3 <= 0.315472
+|   SER_DIVIDA_ATRASADA <= 1525.5
+|   |   EXT_SOURCE_2 <= 0.379713
+|   |   |   EXT_SOURCE_2 <= 0.070599
+|   |   |   |   REGION_RATING_CLIENT <= 1: 0 (74.0/9.0)
+|   |   |   |   REGION_RATING_CLIENT > 1
+|   |   |   |   |   EXT_SOURCE_1 <= 0.508603
+|   |   |   |   |   |   EXT_SOURCE_3 <= 0.175606
+|   |   |   |   |   |   |   CNT_CHILDREN <= 1
+|   |   |   |   |   |   |   |   REGION_RATING_CLIENT <= 2
+|   |   |   |   |   |   |   |   |   FLAG_EMP_PHONE <= 0
+|   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.50202: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.50202
+|   |   |   |   |   |   |   |   |   |   |   CODE_GENDER_COD <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.107532: 0 (13.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.107532
+|   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 5: 1 (18.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 5: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   CODE_GENDER_COD > 0
+|   |   |   |   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.105473: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.105473: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD > 0: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   FLAG_EMP_PHONE > 0
+|   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 41
+|   |   |   |   |   |   |   |   |   |   |   CODE_GENDER_COD <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   FLAG_EMAIL <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN <= 0: 0 (94.0/37.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.093837: 0 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.093837
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.12218: 1 (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.12218: 0 (10.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD > 3: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   FLAG_EMAIL > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 35: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 35: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN > 0: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   CODE_GENDER_COD > 0
+|   |   |   |   |   |   |   |   |   |   |   |   FLAG_EMAIL <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.021384
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 0: 0 (12.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.098859: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.098859: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 > 0.021384
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 3: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.147346
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.063995: 0 (13.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 > 0.063995: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.147346: 1 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN > 0: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 3: 1 (9.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD > 0: 1 (49.0/23.0)
+|   |   |   |   |   |   |   |   |   |   |   |   FLAG_EMAIL > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 0: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 0: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD > 0: 0 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 41
+|   |   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   CODE_GENDER_COD <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA <= 51.39
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.016078: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.016078: 1 (30.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD > 0: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA > 51.39: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   CODE_GENDER_COD > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.112474: 1 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.112474: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 4: 1 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 4: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.476692: 0 (11.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.476692: 1 (14.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 4: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 3: 1 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD > 4
+|   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.113922: 1 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.113922: 0 (6.0)
+|   |   |   |   |   |   |   |   REGION_RATING_CLIENT > 2
+|   |   |   |   |   |   |   |   |   FLAG_EMP_PHONE <= 0
+|   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 4: 0 (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 4: 1 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   FLAG_EMP_PHONE > 0
+|   |   |   |   |   |   |   |   |   |   CODE_GENDER_COD <= 0
+|   |   |   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.234109: 1 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.234109
+|   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.384369
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.122955: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.122955: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 2: 0 (11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.384369
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 7: 1 (35.0/11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 7: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.050121
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD <= 1: 1 (15.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD > 1: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 > 0.050121: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD > 0
+|   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 22
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.024066: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 > 0.024066: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 2: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 22
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.262207: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.262207: 1 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 2: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   CODE_GENDER_COD > 0
+|   |   |   |   |   |   |   |   |   |   |   SER_QTDE_PRORROGACOES <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA <= 45
+|   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 40: 1 (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 40: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 4: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.148254: 0 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.148254: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.485983: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.485983
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.046661
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.018463
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.060444: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.060444: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 > 0.018463: 1 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 > 0.046661: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.231833: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.231833
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.117614: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.117614: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN <= 0: 1 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 2: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 2: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA > 45: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   SER_QTDE_PRORROGACOES > 0: 1 (5.0/1.0)
+|   |   |   |   |   |   |   CNT_CHILDREN > 1
+|   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.078016: 1 (15.0/3.0)
+|   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.078016: 0 (47.0/9.0)
+|   |   |   |   |   |   EXT_SOURCE_3 > 0.175606
+|   |   |   |   |   |   |   CNT_CHILDREN <= 0
+|   |   |   |   |   |   |   |   FLAG_EMAIL <= 0
+|   |   |   |   |   |   |   |   |   CODE_GENDER_COD <= 0
+|   |   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD <= 0: 0 (262.0/74.0)
+|   |   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD > 0
+|   |   |   |   |   |   |   |   |   |   |   FLAG_EMP_PHONE <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT <= 2: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 0: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 0: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   FLAG_EMP_PHONE > 0
+|   |   |   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.467576: 1 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.467576
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.231439: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.231439: 0 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 3: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD > 2: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.269286: 0 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.269286
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.301625: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.301625: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.282248: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.282248: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 1: 0 (11.0/1.0)
+|   |   |   |   |   |   |   |   |   CODE_GENDER_COD > 0
+|   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 2
+|   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.279335: 0 (10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.279335: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   FLAG_EMP_PHONE <= 0: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   FLAG_EMP_PHONE > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 33: 0 (11.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 33: 1 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD > 2: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 36
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.248536: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.248536: 1 (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 36: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.44345: 0 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.44345
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.297087
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 32
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.206779: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.206779
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.038815: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 > 0.038815: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 1: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.204423: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.204423: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 32: 1 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.297087: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 1
+|   |   |   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.234015: 0 (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.234015
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.029946: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 > 0.029946: 1 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.026466: 1 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 > 0.026466: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD > 4: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.272134: 1 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.272134
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.279335: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.279335: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.108884: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.108884: 1 (20.0/6.0)
+|   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 2
+|   |   |   |   |   |   |   |   |   |   |   SER_QTDE_PRORROGACOES <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.256252
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.155761
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.217629: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.217629: 0 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.155761: 1 (9.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT > 2: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.256252: 0 (49.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   SER_QTDE_PRORROGACOES > 0
+|   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.0294: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 > 0.0294: 1 (2.0)
+|   |   |   |   |   |   |   |   FLAG_EMAIL > 0
+|   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD <= 0
+|   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.283712
+|   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 3: 0 (11.0)
+|   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 3
+|   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 17: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 17: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.283712: 1 (3.0)
+|   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD > 0: 0 (8.0)
+|   |   |   |   |   |   |   CNT_CHILDREN > 0
+|   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD <= 0
+|   |   |   |   |   |   |   |   |   FLAG_EMAIL <= 0
+|   |   |   |   |   |   |   |   |   |   CODE_GENDER_COD <= 0
+|   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.248536
+|   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD <= 1: 1 (32.0/12.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.024026: 1 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 > 0.024026: 0 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 2: 1 (25.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 2: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.248536
+|   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.263647: 0 (14.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.263647
+|   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 32
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 3: 0 (22.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.47965: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.47965: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 32
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.001767: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 > 0.001767
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.310601: 1 (10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.310601
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.435322: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.435322
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.289611: 1 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.289611: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT > 2: 1 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   CODE_GENDER_COD > 0
+|   |   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 4: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 1: 1 (11.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.266784: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.266784
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.202087: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.202087
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.020224: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 > 0.020224: 1 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD > 1: 0 (13.0/2.0)
+|   |   |   |   |   |   |   |   |   FLAG_EMAIL > 0
+|   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD <= 3
+|   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 1: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 1: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD > 3: 1 (2.0)
+|   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD > 0
+|   |   |   |   |   |   |   |   |   FLAG_EMAIL <= 0
+|   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT <= 2
+|   |   |   |   |   |   |   |   |   |   |   CODE_GENDER_COD <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 6: 0 (24.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 6: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   CODE_GENDER_COD > 0
+|   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.439461: 0 (13.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.439461
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 40: 0 (10.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 40
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 47: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 47: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD > 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 0: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 0: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN > 3: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT > 2
+|   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.235311: 1 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.235311
+|   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.464585: 0 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.464585
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.042187
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.036372
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.028307: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 > 0.028307: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 > 0.036372: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 > 0.042187: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 4: 0 (3.0)
+|   |   |   |   |   |   |   |   |   FLAG_EMAIL > 0
+|   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.246679: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.246679: 1 (4.0)
+|   |   |   |   |   EXT_SOURCE_1 > 0.508603
+|   |   |   |   |   |   FLAG_OWN_CAR_COD <= 0
+|   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.207964
+|   |   |   |   |   |   |   |   REGION_RATING_CLIENT <= 2
+|   |   |   |   |   |   |   |   |   FLAG_EMP_PHONE <= 0
+|   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.01584: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 > 0.01584: 0 (12.0/1.0)
+|   |   |   |   |   |   |   |   |   FLAG_EMP_PHONE > 0
+|   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 52
+|   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 37
+|   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.15664
+|   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.127699
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.082815: 0 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.082815: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.127699: 0 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.15664: 1 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 37: 0 (18.0/1.0)
+|   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 52: 1 (3.0)
+|   |   |   |   |   |   |   |   REGION_RATING_CLIENT > 2
+|   |   |   |   |   |   |   |   |   CNT_CHILDREN <= 0
+|   |   |   |   |   |   |   |   |   |   FLAG_EMP_PHONE <= 0
+|   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.110332: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.110332: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   FLAG_EMP_PHONE > 0: 0 (7.0/2.0)
+|   |   |   |   |   |   |   |   |   CNT_CHILDREN > 0: 1 (2.0)
+|   |   |   |   |   |   |   EXT_SOURCE_3 > 0.207964: 0 (50.0/2.0)
+|   |   |   |   |   |   FLAG_OWN_CAR_COD > 0
+|   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 3
+|   |   |   |   |   |   |   |   REGION_RATING_CLIENT <= 2
+|   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.300108
+|   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.179822
+|   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.601462: 1 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.601462: 0 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.179822: 0 (27.0/3.0)
+|   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.300108: 1 (3.0)
+|   |   |   |   |   |   |   |   REGION_RATING_CLIENT > 2
+|   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 40: 0 (9.0/1.0)
+|   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 40: 1 (3.0)
+|   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 3: 0 (6.0)
+|   |   |   EXT_SOURCE_2 > 0.070599
+|   |   |   |   EXT_SOURCE_3 <= 0.145543
+|   |   |   |   |   EXT_SOURCE_1 <= 0.07735
+|   |   |   |   |   |   NAME_HOUSING_TYPE_COD <= 3: 1 (44.0/13.0)
+|   |   |   |   |   |   NAME_HOUSING_TYPE_COD > 3: 0 (7.0)
+|   |   |   |   |   EXT_SOURCE_1 > 0.07735
+|   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 10
+|   |   |   |   |   |   |   FLAG_EMP_PHONE <= 0
+|   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 5: 0 (255.0/54.0)
+|   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 5
+|   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.135951
+|   |   |   |   |   |   |   |   |   |   CODE_GENDER_COD <= 0
+|   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA <= 337.5: 0 (26.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA > 337.5: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 1
+|   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 8: 1 (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 8: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   CODE_GENDER_COD > 0: 1 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.135951: 1 (5.0)
+|   |   |   |   |   |   |   FLAG_EMP_PHONE > 0
+|   |   |   |   |   |   |   |   FLAG_EMAIL <= 0
+|   |   |   |   |   |   |   |   |   SER_QTDE_PRORROGACOES <= 0
+|   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT <= 1: 0 (106.0/24.0)
+|   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT > 1
+|   |   |   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   CODE_GENDER_COD <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 34
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.34804
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 6
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 2: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 2: 1 (26.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA <= 17.28
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 4: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.107532
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.070581: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.070581: 1 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.107532: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.113922: 0 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.113922: 1 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.28384
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 16
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.217492: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 > 0.217492: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 16: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.28384: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA > 17.28: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 2: 0 (11.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 6: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.084473: 0 (9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.084473
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.126898
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 6: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 6: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 1: 1 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.126898: 0 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.121408: 1 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.121408: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.34804
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 1: 0 (280.0/60.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 2: 0 (19.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 20
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 4: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 4: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 20: 1 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 2: 0 (23.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.197456: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 > 0.197456
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 3: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.100152: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.100152: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 5: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD > 3: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA <= 19.71
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.533331
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.417883: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.417883
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.263093: 0 (10.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 > 0.263093: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 4: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 4: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD > 2: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN > 2: 1 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.533331: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 2: 0 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA > 19.71: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT > 2: 0 (118.0/29.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 34
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 52
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.267967: 1 (134.0/65.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 > 0.267967
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.387968
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.328843: 0 (10.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 > 0.328843
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.086162: 0 (5.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.086162: 1 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.387968: 0 (82.0/16.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD <= 3: 0 (66.0/20.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD > 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.064237: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.064237
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.106842: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.106842: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN > 0: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 38: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 38
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT <= 2: 1 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT > 2: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN > 0: 1 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 52: 0 (21.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   CODE_GENDER_COD > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA <= 10.35
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT <= 2: 0 (179.0/69.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.116125
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.443733: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.443733: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 1: 1 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.116125: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 2: 1 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD > 3: 0 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.398198: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.398198: 0 (19.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.484386
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 12
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.262711: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 > 0.262711: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 12: 0 (10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.484386
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.136801
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.276729: 1 (13.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 > 0.276729
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 3: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 3: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 4: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.136801: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 26: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 26: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 2: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.252966
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.188149: 0 (11.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 > 0.188149: 1 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 > 0.252966: 0 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.426339: 1 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.426339: 0 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT > 2: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.126898
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.269204: 0 (18.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 > 0.269204
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.312487: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 > 0.312487: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.126898: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD > 2: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA > 10.35: 0 (24.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD > 0: 0 (697.0/201.0)
+|   |   |   |   |   |   |   |   |   SER_QTDE_PRORROGACOES > 0
+|   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT <= 2
+|   |   |   |   |   |   |   |   |   |   |   CODE_GENDER_COD <= 0: 0 (43.0/10.0)
+|   |   |   |   |   |   |   |   |   |   |   CODE_GENDER_COD > 0
+|   |   |   |   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA <= 22.275
+|   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.524314
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.266661
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.438858: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.438858: 0 (11.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 > 0.266661: 0 (15.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.524314: 1 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA > 22.275: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT > 2
+|   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.367219: 0 (15.0)
+|   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_2 > 0.367219: 1 (2.0)
+|   |   |   |   |   |   |   |   FLAG_EMAIL > 0
+|   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA <= 1.305
+|   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.072983
+|   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.515661
+|   |   |   |   |   |   |   |   |   |   |   |   CODE_GENDER_COD <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 40: 0 (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 40: 1 (11.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   CODE_GENDER_COD > 0: 1 (13.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.515661: 0 (9.0)
+|   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.072983
+|   |   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 1: 0 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 1: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT > 1: 0 (118.0/20.0)
+|   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA > 1.305: 0 (9.0)
+|   |   |   |   |   |   SER_CREDITOS_ATIVOS > 10
+|   |   |   |   |   |   |   SER_QTDE_PRORROGACOES <= 0
+|   |   |   |   |   |   |   |   FLAG_EMP_PHONE <= 0: 1 (2.0)
+|   |   |   |   |   |   |   |   FLAG_EMP_PHONE > 0
+|   |   |   |   |   |   |   |   |   CNT_CHILDREN <= 0
+|   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.497: 1 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.497: 0 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   CNT_CHILDREN > 0: 0 (6.0)
+|   |   |   |   |   |   |   SER_QTDE_PRORROGACOES > 0: 1 (7.0)
+|   |   |   |   EXT_SOURCE_3 > 0.145543
+|   |   |   |   |   SER_CREDITOS_ATIVOS <= 9: 0 (8061.0/1701.0)
+|   |   |   |   |   SER_CREDITOS_ATIVOS > 9
+|   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 14
+|   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.181959: 0 (13.0)
+|   |   |   |   |   |   |   EXT_SOURCE_3 > 0.181959
+|   |   |   |   |   |   |   |   FLAG_EMAIL <= 0
+|   |   |   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.687324
+|   |   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD <= 0
+|   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 11: 0 (20.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 11: 1 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN > 0: 1 (5.0)
+|   |   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD > 0: 0 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   EXT_SOURCE_1 > 0.687324: 1 (3.0)
+|   |   |   |   |   |   |   |   FLAG_EMAIL > 0: 1 (7.0/2.0)
+|   |   |   |   |   |   SER_CREDITOS_ATIVOS > 14: 1 (3.0)
+|   |   EXT_SOURCE_2 > 0.379713: 0 (32136.0/4190.0)
+|   SER_DIVIDA_ATRASADA > 1525.5
+|   |   EXT_SOURCE_2 <= 0.677021
+|   |   |   SER_QTDE_PRORROGACOES <= 0
+|   |   |   |   CODE_GENDER_COD <= 0
+|   |   |   |   |   FLAG_OWN_CAR_COD <= 0
+|   |   |   |   |   |   FLAG_EMAIL <= 0
+|   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 0
+|   |   |   |   |   |   |   |   REGION_RATING_CLIENT <= 2
+|   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.177704
+|   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 8
+|   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN <= 0: 0 (53.0/19.0)
+|   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN > 0
+|   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 4: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 4: 0 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN > 1: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 8: 1 (8.0/2.0)
+|   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.177704
+|   |   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA <= 4878
+|   |   |   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA <= 4275: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA > 4275: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA > 4878: 0 (22.0/1.0)
+|   |   |   |   |   |   |   |   REGION_RATING_CLIENT > 2
+|   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 1: 1 (4.0)
+|   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 1
+|   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD <= 3
+|   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 16: 0 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 16
+|   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 37: 1 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 37: 0 (8.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   CNT_CHILDREN > 0
+|   |   |   |   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA <= 13500: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA > 13500: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD > 3: 0 (2.0)
+|   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 0
+|   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA <= 21541.5
+|   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD <= 3
+|   |   |   |   |   |   |   |   |   |   CNT_CHILDREN <= 0
+|   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.247191: 0 (17.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.247191: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   CNT_CHILDREN > 0
+|   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 3: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 3: 1 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD > 3: 1 (3.0/1.0)
+|   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA > 21541.5: 1 (16.0/2.0)
+|   |   |   |   |   |   FLAG_EMAIL > 0
+|   |   |   |   |   |   |   EXT_SOURCE_2 <= 0.202751: 1 (3.0)
+|   |   |   |   |   |   |   EXT_SOURCE_2 > 0.202751: 0 (12.0/1.0)
+|   |   |   |   |   FLAG_OWN_CAR_COD > 0
+|   |   |   |   |   |   CNT_CHILDREN <= 0
+|   |   |   |   |   |   |   FLAG_EMAIL <= 0: 0 (27.0/3.0)
+|   |   |   |   |   |   |   FLAG_EMAIL > 0: 1 (2.0)
+|   |   |   |   |   |   CNT_CHILDREN > 0
+|   |   |   |   |   |   |   REGION_RATING_CLIENT <= 2
+|   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 12: 0 (5.0)
+|   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 12: 1 (10.0/2.0)
+|   |   |   |   |   |   |   REGION_RATING_CLIENT > 2: 0 (3.0)
+|   |   |   |   CODE_GENDER_COD > 0
+|   |   |   |   |   NAME_HOUSING_TYPE_COD <= 4
+|   |   |   |   |   |   CNT_CHILDREN <= 1
+|   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD <= 1
+|   |   |   |   |   |   |   |   FLAG_EMP_PHONE <= 0
+|   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 6: 0 (7.0/1.0)
+|   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 6: 1 (3.0)
+|   |   |   |   |   |   |   |   FLAG_EMP_PHONE > 0
+|   |   |   |   |   |   |   |   |   CNT_CHILDREN <= 0
+|   |   |   |   |   |   |   |   |   |   FLAG_EMAIL <= 0
+|   |   |   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 2: 1 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 2: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 4: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 12: 1 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 12: 0 (8.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD > 0
+|   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 17
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA <= 39856.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 2: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 2: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA > 39856.5: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 17: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 3
+|   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.054957: 1 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.054957
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA <= 59886
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA <= 11596.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA <= 7416: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA > 7416: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA > 11596.5: 0 (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA > 59886: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   FLAG_EMAIL > 0
+|   |   |   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA <= 164182.5: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA > 164182.5: 0 (2.0)
+|   |   |   |   |   |   |   |   |   CNT_CHILDREN > 0
+|   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT <= 2
+|   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 2
+|   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS <= 5
+|   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.249885
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD <= 10: 1 (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   ORGANIZATION_TYPE_COD > 10
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD <= 0: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   FLAG_OWN_CAR_COD > 0: 1 (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.249885: 0 (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   SER_CREDITOS_ATIVOS > 5: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 2: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   REGION_RATING_CLIENT > 2: 1 (2.0)
+|   |   |   |   |   |   |   NAME_HOUSING_TYPE_COD > 1
+|   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA <= 91852.065: 0 (7.0/1.0)
+|   |   |   |   |   |   |   |   SER_DIVIDA_ATRASADA > 91852.065: 1 (2.0)
+|   |   |   |   |   |   CNT_CHILDREN > 1
+|   |   |   |   |   |   |   PREV_QTDE_CANCELADO <= 0: 0 (11.0/1.0)
+|   |   |   |   |   |   |   PREV_QTDE_CANCELADO > 0
+|   |   |   |   |   |   |   |   EXT_SOURCE_3 <= 0.158555: 1 (2.0)
+|   |   |   |   |   |   |   |   EXT_SOURCE_3 > 0.158555: 0 (2.0)
+|   |   |   |   |   NAME_HOUSING_TYPE_COD > 4
+|   |   |   |   |   |   EXT_SOURCE_3 <= 0.035356: 0 (4.0/1.0)
+|   |   |   |   |   |   EXT_SOURCE_3 > 0.035356: 1 (12.0/1.0)
+|   |   |   SER_QTDE_PRORROGACOES > 0
+|   |   |   |   CODE_GENDER_COD <= 0
+|   |   |   |   |   FLAG_EMP_PHONE <= 0: 0 (3.0/1.0)
+|   |   |   |   |   FLAG_EMP_PHONE > 0
+|   |   |   |   |   |   NAME_HOUSING_TYPE_COD <= 3: 1 (11.0)
+|   |   |   |   |   |   NAME_HOUSING_TYPE_COD > 3: 0 (3.0/1.0)
+|   |   |   |   CODE_GENDER_COD > 0
+|   |   |   |   |   SER_QTDE_PRORROGACOES <= 1
+|   |   |   |   |   |   FLAG_OWN_CAR_COD <= 0
+|   |   |   |   |   |   |   EXT_SOURCE_1 <= 0.367083: 1 (2.0)
+|   |   |   |   |   |   |   EXT_SOURCE_1 > 0.367083: 0 (7.0/1.0)
+|   |   |   |   |   |   FLAG_OWN_CAR_COD > 0: 0 (5.0)
+|   |   |   |   |   SER_QTDE_PRORROGACOES > 1: 1 (4.0)
+|   |   EXT_SOURCE_2 > 0.677021
+|   |   |   SER_CREDITOS_ATIVOS <= 5
+|   |   |   |   SER_DIVIDA_ATRASADA <= 67221: 0 (38.0)
+|   |   |   |   SER_DIVIDA_ATRASADA > 67221
+|   |   |   |   |   SER_DIVIDA_ATRASADA <= 105556.5: 1 (2.0)
+|   |   |   |   |   SER_DIVIDA_ATRASADA > 105556.5: 0 (7.0/1.0)
+|   |   |   SER_CREDITOS_ATIVOS > 5
+|   |   |   |   EXT_SOURCE_3 <= 0.109626
+|   |   |   |   |   ORGANIZATION_TYPE_COD <= 21
+|   |   |   |   |   |   SER_DIVIDA_ATRASADA <= 17446.5: 1 (3.0)
+|   |   |   |   |   |   SER_DIVIDA_ATRASADA > 17446.5: 0 (4.0)
+|   |   |   |   |   ORGANIZATION_TYPE_COD > 21: 1 (3.0)
+|   |   |   |   EXT_SOURCE_3 > 0.109626: 0 (10.0)
+EXT_SOURCE_3 > 0.315472: 0 (262127.0/17158.0)
+
+Number of Leaves  : 	408
+
+Size of the tree : 	815
+
+
+Time taken to build model: 147.39 seconds
+
+Time taken to test model on training data: 0.48 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances      283442               92.173  %
+Incorrectly Classified Instances     24069                7.827  %
+Kappa statistic                          0.0686
+Mean absolute error                      0.1415
+Root mean squared error                  0.266 
+Relative absolute error                 95.3216 %
+Root relative squared error             97.6335 %
+Total Number of Instances           307511     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,999    0,960    0,922      0,999    0,959      0,169    0,595     0,934     0
+                 0,040    0,001    0,811      0,040    0,076      0,169    0,595     0,159     1
+Weighted Avg.    0,922    0,883    0,913      0,922    0,888      0,169    0,595     0,871     
+
+
+=== Confusion Matrix ===
+
+      a      b   <-- classified as
+ 282457    229 |      a = 0
+  23840    985 |      b = 1
+
+Time taken to perform cross-validation: 2533.03 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances      282391               91.8312 %
+Incorrectly Classified Instances     25120                8.1688 %
+Kappa statistic                          0.0286
+Mean absolute error                      0.1441
+Root mean squared error                  0.2711
+Relative absolute error                 97.0687 %
+Root relative squared error             99.5082 %
+Total Number of Instances           307511     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,997    0,981    0,920      0,997    0,957      0,070    0,586     0,932     0
+                 0,019    0,003    0,381      0,019    0,036      0,070    0,586     0,139     1
+Weighted Avg.    0,918    0,902    0,877      0,918    0,883      0,070    0,586     0,868     
+
+
+=== Confusion Matrix ===
+
+      a      b   <-- classified as
+ 281921    765 |      a = 0
+  24355    470 |      b = 1
+
+

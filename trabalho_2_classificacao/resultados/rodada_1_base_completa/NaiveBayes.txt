@@ -1,0 +1,317 @@
+Status da execucao: OK
+Metodo: NaiveBayes
+Classe WEKA: weka.classifiers.bayes.NaiveBayes
+Base usada: C:\Users\drz\Desktop\Faculdade\CD\entrega_preprocessamento_ciencia_dados\trabalho_2_classificacao\data\base_weka_completa.arff
+Validacao cruzada: sim
+Numero de folds: 10
+Seed: 42
+Memoria maxima Java: 8g
+Tempo medido pelo script: 57.98 segundos
+Comando:
+java -Xmx8g -cp "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.bayes.NaiveBayes -t C:\Users\drz\Desktop\Faculdade\CD\entrega_preprocessamento_ciencia_dados\trabalho_2_classificacao\data\base_weka_completa.arff -x 10 -s 42 -c last
+
+Saida completa do WEKA:
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                                        Class
+Attribute                                   0            1
+                                       (0.92)       (0.08)
+===========================================================
+CNT_CHILDREN
+  mean                                  0.4245       0.4779
+  std. dev.                             0.6844       0.7209
+  weight sum                            282686        24825
+  precision                             1.3571       1.3571
+
+AMT_INCOME_TOTAL
+  mean                             165508.1845  161699.5144
+  std. dev.                        112983.7964  747123.4994
+  weight sum                            282686        24825
+  precision                         45926.3251   45926.3251
+
+AMT_CREDIT
+  mean                             602632.6963  557750.3117
+  std. dev.                        406834.1592  346410.4647
+  weight sum                            282686        24825
+  precision                           714.9232     714.9232
+
+AGE_YEARS
+  mean                                 44.1839      40.7524
+  std. dev.                            11.9485      11.4792
+  weight sum                            282686        24825
+  precision                             0.0101       0.0101
+
+FLAG_MOBIL
+  mean                                       1            1
+  std. dev.                             0.1667       0.1667
+  weight sum                            282686        24825
+  precision                                  1            1
+
+FLAG_EMP_PHONE
+  mean                                  0.8147       0.8795
+  std. dev.                             0.3886       0.3255
+  weight sum                            282686        24825
+  precision                                  1            1
+
+FLAG_EMAIL
+  mean                                  0.0568       0.0553
+  std. dev.                             0.2315       0.2287
+  weight sum                            282686        24825
+  precision                                  1            1
+
+REGION_RATING_CLIENT
+  mean                                  2.0436       2.1536
+  std. dev.                             0.5084        0.505
+  weight sum                            282686        24825
+  precision                                  1            1
+
+EXT_SOURCE_1
+  mean                                  0.5084       0.4578
+  std. dev.                             0.1384       0.1428
+  weight sum                            282686        24825
+  precision                                  0            0
+
+EXT_SOURCE_2
+  mean                                  0.5236       0.4113
+  std. dev.                             0.1861        0.213
+  weight sum                            282686        24825
+  precision                                  0            0
+
+EXT_SOURCE_3
+  mean                                  0.5238       0.4238
+  std. dev.                              0.171       0.1907
+  weight sum                            282686        24825
+  precision                             0.0011       0.0011
+
+CREDIT_INCOME_RATIO
+  mean                                  3.9637       3.8874
+  std. dev.                             2.6951       2.6273
+  weight sum                            282686        24825
+  precision                             0.0017       0.0017
+
+CODE_GENDER_COD
+  mean                                   0.334       0.4292
+  std. dev.                             0.4717        0.495
+  weight sum                            282686        24825
+  precision                                  1            1
+
+FLAG_OWN_CAR_COD
+  mean                                  0.3432       0.3052
+  std. dev.                             0.4748       0.4605
+  weight sum                            282686        24825
+  precision                                  1            1
+
+FLAG_OWN_REALTY_COD
+  mean                                  0.6945       0.6841
+  std. dev.                             0.4606       0.4649
+  weight sum                            282686        24825
+  precision                                  1            1
+
+NAME_INCOME_TYPE_COD
+  mean                                   4.635       5.0724
+  std. dev.                             2.5422       2.5366
+  weight sum                            282686        24825
+  precision                                  1            1
+
+NAME_EDUCATION_TYPE_COD
+  mean                                  3.1672        3.428
+  std. dev.                             1.3102       1.1338
+  weight sum                            282686        24825
+  precision                                  1            1
+
+NAME_FAMILY_STATUS_COD
+  mean                                  2.4201       2.4183
+  std. dev.                             1.0222       1.0332
+  weight sum                            282686        24825
+  precision                                  1            1
+
+NAME_HOUSING_TYPE_COD
+  mean                                  1.2807       1.4011
+  std. dev.                             0.9347       1.1161
+  weight sum                            282686        24825
+  precision                                  1            1
+
+OCCUPATION_TYPE_COD
+  mean                                  6.0097        6.835
+  std. dev.                             5.4899       5.4469
+  weight sum                            282686        24825
+  precision                                  1            1
+
+ORGANIZATION_TYPE_COD
+  mean                                  29.637       27.326
+  std. dev.                            20.4875      20.0669
+  weight sum                            282686        24825
+  precision                                  1            1
+
+SER_QTDE_EMPRESTIMOS
+  mean                                  5.0627       4.8917
+  std. dev.                             4.4034       4.6634
+  weight sum                            282686        24825
+  precision                             1.9333       1.9333
+
+SER_DIVIDA_ATRASADA
+  mean                                135.0763     803.0129
+  std. dev.                         14106.3947   24957.8997
+  weight sum                            282686        24825
+  precision                          3086.8373    3086.8373
+
+SER_CREDITOS_ATIVOS
+  mean                                  1.7384       2.0201
+  std. dev.                             1.7426       2.1038
+  weight sum                            282686        24825
+  precision                             1.4545       1.4545
+
+SER_DAYS_CREDIT_MEDIO
+  mean                               -944.0532    -745.3188
+  std. dev.                           645.0641     613.0406
+  weight sum                            282686        24825
+  precision                             0.0453       0.0453
+
+SER_DIAS_ATRASO_MAX
+  mean                                  3.9826       5.3022
+  std. dev.                             81.835      90.0858
+  weight sum                            282686        24825
+  precision                             3.2203       3.2203
+
+SER_CREDITO_TOTAL
+  mean                            1696439.3639 1441230.9097
+  std. dev.                       3956737.0179 2459107.7214
+  weight sum                            282686        24825
+  precision                          4950.6756    4950.6756
+
+SER_DIVIDA_TOTAL
+  mean                             548080.9802  558716.4525
+  std. dev.                         1552819.73 1226206.4403
+  weight sum                            282686        24825
+  precision                          2203.1245    2203.1245
+
+SER_MAX_OVERDUE
+  mean                               5466.3841     7319.042
+  std. dev.                         293089.156  158167.1528
+  weight sum                            282686        24825
+  precision                           2589.173     2589.173
+
+SER_QTDE_PRORROGACOES
+  mean                                  0.0346       0.0361
+  std. dev.                             0.2298       0.2232
+  weight sum                            282686        24825
+  precision                                  1            1
+
+PREV_QTDE_TENTATIVAS
+  mean                                  4.6451        5.002
+  std. dev.                             4.0644       4.5486
+  weight sum                            282686        24825
+  precision                             1.1231       1.1231
+
+PREV_QTDE_REJEITADAS
+  mean                                  0.8147       1.2408
+  std. dev.                              1.741       2.3353
+  weight sum                            282686        24825
+  precision                             1.5111       1.5111
+
+PREV_TAXA_REJEICAO
+  mean                                  0.1008       0.1525
+  std. dev.                             0.1769       0.2174
+  weight sum                            282686        24825
+  precision                             0.0025       0.0025
+
+PREV_VALOR_SOLICITADO_TOTAL
+  mean                              802836.348  837509.6918
+  std. dev.                       1309770.3551 1465297.4421
+  weight sum                            282686        24825
+  precision                            216.303      216.303
+
+PREV_VALOR_APROVADO_TOTAL
+  mean                             898022.8083   955778.169
+  std. dev.                       1445507.7777 1638740.9656
+  weight sum                            282686        24825
+  precision                           213.4487     213.4487
+
+PREV_RAZAO_APROVADO_SOLICITADO
+  mean                                  1.0842       1.1312
+  std. dev.                             0.7121       0.8073
+  weight sum                            282686        24825
+  precision                             0.0002       0.0002
+
+PREV_QTDE_COM_SEGURO
+  mean                                  1.0385        0.983
+  std. dev.                             1.3411       1.2747
+  weight sum                            282686        24825
+  precision                             1.2778       1.2778
+
+PREV_QTDE_CLIENTE_REPETIDOR
+  mean                                  3.4267       3.7126
+  std. dev.                             4.0689       4.5433
+  weight sum                            282686        24825
+  precision                              1.127        1.127
+
+PREV_QTDE_CANCELADO
+  mean                                  0.8948       1.0198
+  std. dev.                              1.663       1.8445
+  weight sum                            282686        24825
+  precision                             1.5263       1.5263
+
+
+
+Time taken to build model: 3.9 seconds
+
+Time taken to test model on training data: 7.14 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances      270801               88.0622 %
+Incorrectly Classified Instances     36710               11.9378 %
+Kappa statistic                          0.0911
+Mean absolute error                      0.1347
+Root mean squared error                  0.322 
+Relative absolute error                 90.7673 %
+Root relative squared error            118.2133 %
+Total Number of Instances           307511     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,946    0,866    0,926      0,946    0,936      0,092    0,689     0,956     0
+                 0,134    0,054    0,180      0,134    0,154      0,092    0,689     0,147     1
+Weighted Avg.    0,881    0,800    0,865      0,881    0,873      0,092    0,689     0,891     
+
+
+=== Confusion Matrix ===
+
+      a      b   <-- classified as
+ 267463  15223 |      a = 0
+  21487   3338 |      b = 1
+
+Time taken to perform cross-validation: 38.41 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances      270205               87.8684 %
+Incorrectly Classified Instances     37306               12.1316 %
+Kappa statistic                          0.096 
+Mean absolute error                      0.1383
+Root mean squared error                  0.324 
+Relative absolute error                 93.1451 %
+Root relative squared error            118.9241 %
+Total Number of Instances           307511     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,943    0,856    0,926      0,943    0,935      0,097    0,685     0,956     0
+                 0,144    0,057    0,182      0,144    0,160      0,097    0,685     0,145     1
+Weighted Avg.    0,879    0,792    0,866      0,879    0,872      0,097    0,685     0,890     
+
+
+=== Confusion Matrix ===
+
+      a      b   <-- classified as
+ 266642  16044 |      a = 0
+  21262   3563 |      b = 1
+

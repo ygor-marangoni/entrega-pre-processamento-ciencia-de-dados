@@ -1,0 +1,6 @@
+{
+  "java_cmd": "java",
+  "java_version": "java version \"1.8.0_491\"",
+  "weka_jar": "C:/Program Files/Weka-3-8-7/weka.jar",
+  "max_memory": "8g"
+}

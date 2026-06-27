@@ -1,0 +1,13 @@
+Status da execucao: FALHA (1)
+Metodo: BayesNet
+Classe WEKA: weka.classifiers.bayes.BayesNet
+Base usada: C:\Users\drz\Desktop\Faculdade\CD\entrega_preprocessamento_ciencia_dados\trabalho_2_classificacao\data\base_weka_completa.arff
+Validacao cruzada: sim
+Numero de folds: 10
+Seed: 42
+Memoria maxima Java: 8g
+Tempo medido pelo script: 2157.72 segundos
+Comando:
+java -Xmx8g -cp "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.bayes.BayesNet -t C:\Users\drz\Desktop\Faculdade\CD\entrega_preprocessamento_ciencia_dados\trabalho_2_classificacao\data\base_weka_completa.arff -x 10 -s 42 -c last
+
+Saida completa do WEKA:

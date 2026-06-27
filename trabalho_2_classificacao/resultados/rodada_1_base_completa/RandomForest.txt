@@ -1,0 +1,83 @@
+Status da execucao: OK
+Metodo: RandomForest
+Classe WEKA: weka.classifiers.trees.RandomForest
+Base usada: C:\Users\drz\Desktop\Faculdade\CD\entrega_preprocessamento_ciencia_dados\trabalho_2_classificacao\data\base_weka_completa.arff
+Validacao cruzada: sim
+Numero de folds: 10
+Seed: 42
+Memoria maxima Java: 8g
+Tempo medido pelo script: 8009.70 segundos
+Comando:
+java -Xmx8g -cp "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.trees.RandomForest -t C:\Users\drz\Desktop\Faculdade\CD\entrega_preprocessamento_ciencia_dados\trabalho_2_classificacao\data\base_weka_completa.arff -x 10 -s 42 -c last -I 100 -S 42
+
+Saida completa do WEKA:
+
+Options: -I 100 -S 42 
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 42 -do-not-check-capabilities
+
+Time taken to build model: 704.86 seconds
+
+Time taken to test model on training data: 116.84 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances      307504               99.9977 %
+Incorrectly Classified Instances         7                0.0023 %
+Kappa statistic                          0.9998
+Mean absolute error                      0.0521
+Root mean squared error                  0.0982
+Relative absolute error                 35.0842 %
+Root relative squared error             36.0527 %
+Total Number of Instances           307511     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1,000    0,000    1,000      1,000    1,000      1,000    1,000     1,000     0
+                 1,000    0,000    1,000      1,000    1,000      1,000    1,000     1,000     1
+Weighted Avg.    1,000    0,000    1,000      1,000    1,000      1,000    1,000     1,000     
+
+
+=== Confusion Matrix ===
+
+      a      b   <-- classified as
+ 282686      0 |      a = 0
+      7  24818 |      b = 1
+
+Time taken to perform cross-validation: 7177.77 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances      282720               91.9382 %
+Incorrectly Classified Instances     24791                8.0618 %
+Kappa statistic                          0.0085
+Mean absolute error                      0.1417
+Root mean squared error                  0.2625
+Relative absolute error                 95.4849 %
+Root relative squared error             96.3455 %
+Total Number of Instances           307511     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1,000    0,995    0,920      1,000    0,958      0,048    0,734     0,963     0
+                 0,005    0,000    0,579      0,005    0,010      0,048    0,734     0,221     1
+Weighted Avg.    0,919    0,915    0,892      0,919    0,881      0,048    0,734     0,903     
+
+
+=== Confusion Matrix ===
+
+      a      b   <-- classified as
+ 282596     90 |      a = 0
+  24701    124 |      b = 1
+

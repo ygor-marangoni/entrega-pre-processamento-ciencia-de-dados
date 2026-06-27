@@ -1,0 +1,81 @@
+Status da execucao: OK
+Metodo: IBk
+Classe WEKA: weka.classifiers.lazy.IBk
+Base usada: C:\Users\drz\Desktop\Faculdade\CD\entrega_preprocessamento_ciencia_dados\trabalho_2_classificacao\data\base_weka_completa.arff
+Validacao cruzada: sim
+Numero de folds: 10
+Seed: 42
+Memoria maxima Java: 8g
+Tempo medido pelo script: 45154.33 segundos
+Comando:
+java -Xmx8g -cp "C:\Program Files\Weka-3-8-7\weka.jar" weka.classifiers.lazy.IBk -t C:\Users\drz\Desktop\Faculdade\CD\entrega_preprocessamento_ciencia_dados\trabalho_2_classificacao\data\base_weka_completa.arff -x 10 -s 42 -c last -K 5
+
+Saida completa do WEKA:
+
+Options: -K 5 
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 5 nearest neighbour(s) for classification
+
+
+Time taken to build model: 4.78 seconds
+
+Time taken to test model on training data: 12143.05 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances      284079               92.3801 %
+Incorrectly Classified Instances     23432                7.6199 %
+Kappa statistic                          0.166 
+Mean absolute error                      0.1076
+Root mean squared error                  0.2336
+Relative absolute error                 72.5178 %
+Root relative squared error             85.7558 %
+Total Number of Instances           307511     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,996    0,893    0,927      0,996    0,960      0,249    0,911     0,987     0
+                 0,107    0,004    0,679      0,107    0,184      0,249    0,911     0,378     1
+Weighted Avg.    0,924    0,822    0,907      0,924    0,897      0,249    0,911     0,938     
+
+
+=== Confusion Matrix ===
+
+      a      b   <-- classified as
+ 281433   1253 |      a = 0
+  22179   2646 |      b = 1
+
+Time taken to perform cross-validation: 33000.8 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances      280927               91.3551 %
+Incorrectly Classified Instances     26584                8.6449 %
+Kappa statistic                          0.0428
+Mean absolute error                      0.1345
+Root mean squared error                  0.2864
+Relative absolute error                 90.5885 %
+Root relative squared error            105.1283 %
+Total Number of Instances           307511     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,991    0,965    0,921      0,991    0,955      0,067    0,598     0,935     0
+                 0,035    0,009    0,250      0,035    0,062      0,067    0,598     0,117     1
+Weighted Avg.    0,914    0,888    0,867      0,914    0,883      0,067    0,598     0,869     
+
+
+=== Confusion Matrix ===
+
+      a      b   <-- classified as
+ 280049   2637 |      a = 0
+  23947    878 |      b = 1
+

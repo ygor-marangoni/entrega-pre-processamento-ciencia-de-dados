@@ -1,0 +1,21 @@
+# Atributos relevantes selecionados automaticamente da arvore J48
+# Origem: C:\Users\drz\Desktop\Faculdade\CD\entrega_preprocessamento_ciencia_dados\trabalho_2_classificacao\resultados\rodada_1_base_completa\J48.txt
+# Criterio: top 15 priorizando menor profundidade na arvore J48 e, depois, ocorrencia ponderada.
+# Ranking completo: resultados/ranking_atributos_j48.csv
+# Um atributo por linha; esta lista e a entrada da base reduzida da etapa 2.
+
+SER_DIVIDA_ATRASADA
+EXT_SOURCE_3
+SER_QTDE_PRORROGACOES
+EXT_SOURCE_2
+FLAG_OWN_CAR_COD
+PREV_QTDE_CANCELADO
+SER_CREDITOS_ATIVOS
+EXT_SOURCE_1
+FLAG_EMP_PHONE
+CNT_CHILDREN
+REGION_RATING_CLIENT
+NAME_HOUSING_TYPE_COD
+CODE_GENDER_COD
+ORGANIZATION_TYPE_COD
+FLAG_EMAIL
