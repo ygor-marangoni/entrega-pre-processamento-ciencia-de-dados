@@ -1,0 +1,26 @@
+{
+  "tipo": "busca_experimental_janela_curta",
+  "weka_version": "3.8.7",
+  "entrada": "data/preparadas/base_apriori_binaria.arff",
+  "classe": "weka.associations.Apriori",
+  "java_options": ["--add-opens", "java.base/java.lang=ALL-UNNAMED"],
+  "numRules": 30,
+  "metricType": "confidence (0)",
+  "minMetric": 0.9,
+  "lowerBoundMinSupport": 0.03,
+  "upperBoundMinSupport": 0.04,
+  "delta": 0.01,
+  "outputItemSets": true,
+  "treatZeroAsMissing": true,
+  "executado": true,
+  "tempo_total_shell_segundos": 2.412,
+  "tempo_weka_segundos": 2.007,
+  "suporte_efetivo_reportado": 0.03,
+  "quantidade_regras_geradas": 9,
+  "quantidade_regras_tres_itens": 2,
+  "quantidade_itemsets": 1402,
+  "observacoes": [
+    "Foram encontrados 27 itemsets L(1), 261 L(2), 609 L(3), 415 L(4), 87 L(5) e 3 L(6).",
+    "Das 9 regras retornadas, 2 possuem exatamente três itens totais."
+  ]
+}

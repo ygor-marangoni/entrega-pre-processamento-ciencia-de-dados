@@ -1,0 +1,27 @@
+{
+  "tipo": "busca_experimental_janela_curta",
+  "weka_version": "3.8.7",
+  "entrada": "data/preparadas/base_apriori_binaria.arff",
+  "classe": "weka.associations.Apriori",
+  "java_options": ["--add-opens", "java.base/java.lang=ALL-UNNAMED"],
+  "numRules": 30,
+  "metricType": "confidence (0)",
+  "minMetric": 0.9,
+  "lowerBoundMinSupport": 0.01,
+  "upperBoundMinSupport": 0.02,
+  "delta": 0.01,
+  "outputItemSets": true,
+  "treatZeroAsMissing": true,
+  "executado": true,
+  "tempo_total_shell_segundos": 5.614,
+  "tempo_weka_segundos": 4.672,
+  "suporte_efetivo_reportado": 0.01,
+  "quantidade_regras_geradas": 30,
+  "quantidade_regras_tres_itens": 0,
+  "quantidade_itemsets": 5119,
+  "observacoes": [
+    "Foram encontrados 27 itemsets L(1), 309 L(2), 1405 L(3), 2103 L(4), 1093 L(5), 176 L(6) e 6 L(7).",
+    "As 30 regras retornadas possuem quatro ou mais itens; o ranking por confiança priorizou antecedentes longos neste suporte.",
+    "Uma rodada exploratória separada com numRules=200 verificará a disponibilidade total de regras de três itens."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "tipo": "busca_experimental",
+  "weka_version": "3.8.7",
+  "entrada": "data/preparadas/base_apriori_binaria.arff",
+  "classe": "weka.associations.Apriori",
+  "java_options": ["--add-opens", "java.base/java.lang=ALL-UNNAMED"],
+  "numRules": 30,
+  "metricType": "confidence (0)",
+  "minMetric": 0.9,
+  "lowerBoundMinSupport": 0.25,
+  "upperBoundMinSupport": 1.0,
+  "delta": 0.05,
+  "outputItemSets": true,
+  "treatZeroAsMissing": true,
+  "executado": true,
+  "tempo_total_shell_segundos": 0.54,
+  "tempo_weka_segundos": 0.285,
+  "suporte_efetivo_reportado": 0.25,
+  "quantidade_regras_geradas": 0,
+  "quantidade_regras_tres_itens": 0,
+  "quantidade_itemsets": 30,
+  "observacoes": [
+    "Foram encontrados 14 itemsets L(1), 12 L(2) e 4 L(3).",
+    "Nenhuma regra satisfez a confiança mínima de 0.9."
+  ]
+}

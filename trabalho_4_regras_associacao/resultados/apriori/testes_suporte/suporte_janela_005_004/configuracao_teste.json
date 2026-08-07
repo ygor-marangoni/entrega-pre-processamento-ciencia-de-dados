@@ -1,0 +1,30 @@
+{
+  "tipo": "busca_experimental_janela_curta",
+  "weka_version": "3.8.7",
+  "entrada": "data/preparadas/base_apriori_binaria.arff",
+  "classe": "weka.associations.Apriori",
+  "java_options": ["--add-opens", "java.base/java.lang=ALL-UNNAMED"],
+  "numRules": 30,
+  "metricType": "confidence (0)",
+  "minMetric": 0.9,
+  "lowerBoundMinSupport": 0.04,
+  "upperBoundMinSupport": 0.05,
+  "delta": 0.01,
+  "outputItemSets": true,
+  "treatZeroAsMissing": true,
+  "executado": true,
+  "tempo_total_shell_segundos": 2.456,
+  "tempo_weka_segundos": 2.049,
+  "suporte_efetivo_reportado": 0.04,
+  "quantidade_regras_geradas": 9,
+  "quantidade_regras_tres_itens": 2,
+  "quantidade_itemsets": 909,
+  "observacoes_execucao": [
+    "A janela U=0.05/M=0.04 alcançou suporte efetivo 0.04 e preservou o mecanismo de regras do Apriori.",
+    "Das 9 regras retornadas, 2 possuem exatamente três itens totais; as demais possuem quatro ou cinco itens."
+  ],
+  "observacoes_planejadas": [
+    "Janela curta criada após a configuração U=M=0.04 não gerar regras.",
+    "Preserva o mecanismo de redução do Apriori e tenta o suporte 0.04 a partir de 0.05."
+  ]
+}

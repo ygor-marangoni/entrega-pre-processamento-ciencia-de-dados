@@ -1,0 +1,28 @@
+atributo;tipo;categoria;regra;criterio;justificativa;zero_semantico_rotulado
+AMT_CREDIT;NUMERICO;CREDITO_BAIXO;AMT_CREDIT <= 270000;P25;"Primeiro quartil; isola créditos de menor porte.";NAO_SE_APLICA
+AMT_CREDIT;NUMERICO;CREDITO_MEDIO;270000 < AMT_CREDIT <= 512721;P25 a P50;Faixa central inferior da distribuição.;NAO_SE_APLICA
+AMT_CREDIT;NUMERICO;CREDITO_ALTO;512721 < AMT_CREDIT <= 810000;P50 a P75;Faixa central superior da distribuição.;NAO_SE_APLICA
+AMT_CREDIT;NUMERICO;CREDITO_MUITO_ALTO;AMT_CREDIT > 810000;Acima de P75;Cauda superior preservada sem criar faixa rara.;NAO_SE_APLICA
+AMT_INCOME_TOTAL;NUMERICO;RENDA_BAIXA;AMT_INCOME_TOTAL <= 112500;P25;"Primeiro quartil; corte robusto diante de extremos.";NAO_SE_APLICA
+AMT_INCOME_TOTAL;NUMERICO;RENDA_MEDIA;112500 < AMT_INCOME_TOTAL <= 148500;P25 a P50;Faixa central inferior observada.;NAO_SE_APLICA
+AMT_INCOME_TOTAL;NUMERICO;RENDA_ALTA;148500 < AMT_INCOME_TOTAL <= 202500;P50 a P75;Faixa central superior observada.;NAO_SE_APLICA
+AMT_INCOME_TOTAL;NUMERICO;RENDA_MUITO_ALTA;AMT_INCOME_TOTAL > 202500;Acima de P75;Agrupa cauda extrema sem faixas definidas pela largura do intervalo.;NAO_SE_APLICA
+AGE_YEARS;NUMERICO;IDADE_21_A_29;21 <= AGE_YEARS <= 29;Semântico;"Início da vida adulta; limite inferior observado é 21,07.";NAO_SE_APLICA
+AGE_YEARS;NUMERICO;IDADE_30_A_39;29 < AGE_YEARS <= 39;Semântico;Faixa adulta inicial com frequência suficiente.;NAO_SE_APLICA
+AGE_YEARS;NUMERICO;IDADE_40_A_49;39 < AGE_YEARS <= 49;Semântico;Faixa adulta intermediária com frequência suficiente.;NAO_SE_APLICA
+AGE_YEARS;NUMERICO;IDADE_50_A_59;49 < AGE_YEARS <= 59;Semântico;Faixa madura com frequência suficiente.;NAO_SE_APLICA
+AGE_YEARS;NUMERICO;IDADE_60_OU_MAIS;AGE_YEARS > 59;Semântico;"Faixa sênior; preserva interpretação de ciclo de vida.";NAO_SE_APLICA
+CNT_CHILDREN;CONTAGEM;SEM_FILHOS;CNT_CHILDREN = 0;Zero semântico;Maior grupo e significado real explícito.;SIM
+CNT_CHILDREN;CONTAGEM;UM_FILHO;CNT_CHILDREN = 1;Semântico;Grupo natural e frequente.;NAO_SE_APLICA
+CNT_CHILDREN;CONTAGEM;DOIS_OU_MAIS_FILHOS;CNT_CHILDREN >= 2;Frequência;Agrupa contagens raras de 3 a 5 com dois filhos.;NAO_SE_APLICA
+FLAG_OWN_CAR_COD;CATEGORICO;SEM_CARRO;codigo 0;Dicionário do Trabalho 1;"Rótulo semântico recuperado; não usar o código numérico.";SIM
+FLAG_OWN_CAR_COD;CATEGORICO;COM_CARRO;codigo 1;Dicionário do Trabalho 1;Rótulo semântico recuperado.;NAO_SE_APLICA
+NAME_FAMILY_STATUS_COD;CATEGORICO;CASADO_OU_UNIAO_CIVIL;codigos 1 ou 2;Semântica e frequência;Combina situações com parceiro formal para reduzir fragmentação.;NAO_SE_APLICA
+NAME_FAMILY_STATUS_COD;CATEGORICO;SOLTEIRO;codigo 4;Dicionário do Trabalho 1;Categoria individual frequente e interpretável.;NAO_SE_APLICA
+NAME_FAMILY_STATUS_COD;CATEGORICO;SEPARADO_VIUVO_OU_NAO_INFORMADO;codigos 0, 3 ou 5;Frequência;Evita a categoria Unknown isolada com apenas um registro.;SIM
+SER_CREDITOS_ATIVOS;CONTAGEM;SEM_CREDITOS_ATIVOS;SER_CREDITOS_ATIVOS = 0;Zero semântico;Ausência real de créditos ativos, não valor ausente.;SIM
+SER_CREDITOS_ATIVOS;CONTAGEM;UM_A_DOIS_CREDITOS_ATIVOS;1 <= SER_CREDITOS_ATIVOS <= 2;Frequência;Agrupa a maior massa de valores positivos.;NAO_SE_APLICA
+SER_CREDITOS_ATIVOS;CONTAGEM;TRES_OU_MAIS_CREDITOS_ATIVOS;SER_CREDITOS_ATIVOS >= 3;Frequência;Evita uma categoria rara para seis ou mais créditos.;NAO_SE_APLICA
+PREV_TAXA_REJEICAO;PROPORCAO;SEM_REJEICAO_PREVIA;PREV_TAXA_REJEICAO = 0;Zero semântico;Taxa nula representa histórico sem rejeição registrada.;SIM
+PREV_TAXA_REJEICAO;PROPORCAO;REJEICAO_PREVIA_ATE_25_PCT;0 < PREV_TAXA_REJEICAO <= 0.25;P25 entre valores positivos;Distingue rejeição positiva menor ou igual a 25%.;NAO_SE_APLICA
+PREV_TAXA_REJEICAO;PROPORCAO;REJEICAO_PREVIA_ACIMA_25_PCT;PREV_TAXA_REJEICAO > 0.25;P50 aproximado entre valores positivos;Agrupa taxas moderadas e altas com suporte suficiente.;NAO_SE_APLICA

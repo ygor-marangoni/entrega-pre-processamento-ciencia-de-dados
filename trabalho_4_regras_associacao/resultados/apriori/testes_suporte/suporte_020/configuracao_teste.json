@@ -1,0 +1,26 @@
+{
+  "tipo": "busca_experimental",
+  "weka_version": "3.8.7",
+  "entrada": "data/preparadas/base_apriori_binaria.arff",
+  "classe": "weka.associations.Apriori",
+  "java_options": ["--add-opens", "java.base/java.lang=ALL-UNNAMED"],
+  "numRules": 30,
+  "metricType": "confidence (0)",
+  "minMetric": 0.9,
+  "lowerBoundMinSupport": 0.2,
+  "upperBoundMinSupport": 1.0,
+  "delta": 0.05,
+  "outputItemSets": true,
+  "treatZeroAsMissing": true,
+  "executado": true,
+  "tempo_total_shell_segundos": 0.708,
+  "tempo_weka_segundos": 0.388,
+  "suporte_efetivo_reportado": 0.2,
+  "quantidade_regras_geradas": 1,
+  "quantidade_regras_tres_itens": 0,
+  "quantidade_itemsets": 54,
+  "observacoes": [
+    "Foram encontrados 19 itemsets L(1), 26 L(2), 8 L(3) e 1 L(4).",
+    "A única regra tem dois itens totais (idade 50 a 59 => sem filhos), portanto não atende ao requisito de três itens."
+  ]
+}

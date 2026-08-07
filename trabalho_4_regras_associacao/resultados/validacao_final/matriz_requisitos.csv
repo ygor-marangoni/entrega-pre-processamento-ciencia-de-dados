@@ -1,0 +1,4 @@
+requisito;status;evidencia;arquivo;observacao
+Base bin?ria;ATENDIDO;10000x27;base_apriori_binaria.csv;
+PDF ABNT;NAO_ATENDIDO;sem soffice/Word;relatorio;humana
+Top20;ATENDIDO;20/tres/Lift;auditoria_top20.csv;

@@ -1,0 +1,30 @@
+﻿{
+    "tipo":  "busca_exploratoria_parametros_autorizados",
+    "weka_version":  "3.8.7",
+    "entrada":  "data/preparadas/base_apriori_binaria.arff",
+    "classe":  "weka.associations.Apriori",
+    "java_options":  [
+                         "--add-opens",
+                         "java.base/java.lang=ALL-UNNAMED"
+                     ],
+    "numRules":  500,
+    "metricType":  "lift (1)",
+    "minMetric":  0.1,
+    "lowerBoundMinSupport":  0.01,
+    "upperBoundMinSupport":  0.01,
+    "delta":  0.01,
+    "outputItemSets":  true,
+    "treatZeroAsMissing":  true,
+    "alteracao_autorizada":  true,
+    "executado":  true,
+    "codigo_saida":  0,
+    "tempo_total_shell_segundos":  10.539,
+    "tempo_weka_segundos":  9.833,
+    "suporte_efetivo_reportado":  0.01,
+    "quantidade_regras_geradas":  500,
+    "quantidade_regras_tres_itens":  0,
+    "quantidade_itemsets":  5119,
+    "observacoes":  [
+                        "Execução exploratória autorizada com N maior que 30 para verificar a existência de pelo menos 30 regras de três itens. Não substitui a execução final obrigatória com N=30."
+                    ]
+}

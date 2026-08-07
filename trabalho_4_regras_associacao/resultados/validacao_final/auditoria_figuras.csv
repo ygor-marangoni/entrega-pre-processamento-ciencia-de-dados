@@ -1,0 +1,5 @@
+figura;arquivo_origem;status
+01_top20_lift.png;analise_top20_regras.csv;ATENDIDO
+02_confianca_lift_classificacao.png;analise_top20_regras.csv;ATENDIDO
+03_distribuicao_classificacao.png;analise_top20_regras.csv;ATENDIDO
+04_frequencia_itens_top20.png;analise_top20_regras.csv;ATENDIDO

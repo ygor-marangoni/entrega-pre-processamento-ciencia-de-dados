@@ -1,0 +1,30 @@
+{
+  "tipo": "busca_exploratoria_nao_final",
+  "weka_version": "3.8.7",
+  "entrada": "data/preparadas/base_apriori_binaria.arff",
+  "classe": "weka.associations.Apriori",
+  "java_options": ["--add-opens", "java.base/java.lang=ALL-UNNAMED"],
+  "numRules": 1000,
+  "metricType": "confidence (0)",
+  "minMetric": 0.9,
+  "lowerBoundMinSupport": 0.01,
+  "upperBoundMinSupport": 0.02,
+  "delta": 0.01,
+  "outputItemSets": true,
+  "treatZeroAsMissing": true,
+  "executado": true,
+  "tempo_total_shell_segundos": 5.581,
+  "tempo_weka_segundos": 4.37,
+  "suporte_efetivo_reportado": 0.01,
+  "quantidade_regras_geradas": 361,
+  "quantidade_regras_tres_itens": 2,
+  "quantidade_itemsets": 5119,
+  "observacoes_execucao": [
+    "A rodada exploratória solicitou 1000 regras, mas o WEKA encontrou 361 regras com confiança mínima 0.9 nesse suporte.",
+    "Somente 2 possuem exatamente três itens; ampliar numRules não atingiu o critério de 30 regras válidas."
+  ],
+  "observacoes_planejadas": [
+    "Ampliação exploratória para verificar se existem 30 regras exatamente com três itens, preservando a confiança padrão de 0.9.",
+    "Não substitui a configuração final exigida de numRules=30."
+  ]
+}

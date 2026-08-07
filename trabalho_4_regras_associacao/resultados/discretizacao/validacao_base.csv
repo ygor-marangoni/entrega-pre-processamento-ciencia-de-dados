@@ -1,0 +1,11 @@
+verificacao;esperado;observado;status;detalhe
+quantidade_registros;10000;10000;APROVADO;A base Apriori deve preservar o tamanho da amostra autorizada.
+quantidade_atributos;8;8;APROVADO;A base deve conter exatamente os oito atributos selecionados.
+ordem_e_nomes_atributos;FAIXA_CREDITO|FAIXA_RENDA|FAIXA_IDADE|CATEGORIA_FILHOS|POSSE_CARRO|SITUACAO_FAMILIAR|FAIXA_CREDITOS_ATIVOS|FAIXA_TAXA_REJEICAO;FAIXA_CREDITO|FAIXA_RENDA|FAIXA_IDADE|CATEGORIA_FILHOS|POSSE_CARRO|SITUACAO_FAMILIAR|FAIXA_CREDITOS_ATIVOS|FAIXA_TAXA_REJEICAO;APROVADO;Nomes semânticos e ordem aprovados na Etapa 4.
+colunas_protegidas;ausentes;nenhuma;APROVADO;Identificadores, TARGET e cluster não podem virar itens.
+categorias_vazias;0;0;APROVADO;Não pode haver item vazio ou ausente.
+atributos_numericos;0;0;APROVADO;Todos os atributos devem ser nominais no CSV de Apriori.
+zeros_ou_strings_ambiguas;0;0;APROVADO;Zero real deve estar representado por rótulo nominal.
+ordem_dos_registros;categorias idênticas à origem na mesma sequência;corresponde;APROVADO;Recalculado diretamente da amostra por meio das faixas autorizadas.
+rastreabilidade_origem;sequência ROW_ID_AMOSTRA disponível na origem;2ec321e75e28488b83455ba9b64a2ec00fe9470188b0bc6060d837aa56272f5d;APROVADO;"Hash calculado somente na base auxiliar; o identificador não integra o CSV Apriori."
+frequencia_de_todos_os_itens;"27 itens; soma 10000 por atributo";"27 itens; somas corretas=True";APROVADO;A frequência de cada item foi calculada para orientar os suportes futuros.

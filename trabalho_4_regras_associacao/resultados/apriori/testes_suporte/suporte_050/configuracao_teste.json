@@ -1,0 +1,24 @@
+{
+  "tipo": "busca_experimental",
+  "weka_version": "3.8.7",
+  "entrada": "data/preparadas/base_apriori_binaria.arff",
+  "classe": "weka.associations.Apriori",
+  "numRules": 30,
+  "metricType": "confidence (0)",
+  "minMetric": 0.9,
+  "lowerBoundMinSupport": 0.5,
+  "upperBoundMinSupport": 1.0,
+  "delta": 0.05,
+  "outputItemSets": true,
+  "treatZeroAsMissing": true,
+  "executado": true,
+  "tempo_total_shell_segundos": 0.975,
+  "tempo_weka_segundos": 0.291,
+  "quantidade_regras_geradas": 0,
+  "quantidade_regras_tres_itens": 0,
+  "quantidade_itemsets": 0,
+  "observacoes": [
+    "Nenhum itemset grande nem regra foi encontrado.",
+    "O WEKA em Java 17 exibiu aviso de módulo e recomendou --add-opens java.base/java.lang=ALL-UNNAMED; a saída foi preservada integralmente."
+  ]
+}

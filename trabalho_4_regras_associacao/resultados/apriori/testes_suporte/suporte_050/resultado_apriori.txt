@@ -1,0 +1,13 @@
+﻿Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @43556938
+Add --add-opens java.base/java.lang=ALL-UNNAMED as an option after the java command.
+Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @43556938
+Add --add-opens java.base/java.lang=ALL-UNNAMED as an option after the java command.
+Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @43556938
+Add --add-opens java.base/java.lang=ALL-UNNAMED as an option after the java command.
+
+No large itemsets and rules found!
+
+=== Evaluation ===
+
+Elapsed time: 0.291s
+

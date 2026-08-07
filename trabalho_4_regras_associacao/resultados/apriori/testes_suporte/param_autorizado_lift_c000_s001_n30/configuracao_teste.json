@@ -1,0 +1,34 @@
+﻿{
+    "tipo":  "execucao_obrigatoria_n30_para_validar_candidato",
+    "weka_version":  "3.8.7",
+    "entrada":  "data/preparadas/base_apriori_binaria.arff",
+    "classe":  "weka.associations.Apriori",
+    "java_options":  [
+                         "--add-opens",
+                         "java.base/java.lang=ALL-UNNAMED"
+                     ],
+    "numRules":  30,
+    "metricType":  "lift (1)",
+    "minMetric":  0,
+    "lowerBoundMinSupport":  0.01,
+    "upperBoundMinSupport":  0.01,
+    "delta":  0.01,
+    "outputItemSets":  true,
+    "treatZeroAsMissing":  true,
+    "alteracao_autorizada":  true,
+    "executado":  true,
+    "codigo_saida":  0,
+    "tempo_total_shell_segundos":  5.936,
+    "tempo_weka_segundos":  5.293,
+    "suporte_efetivo_reportado":  0.01,
+    "quantidade_regras_geradas":  30,
+    "quantidade_regras_tres_itens":  0,
+    "quantidade_itemsets":  5119,
+    "distribuicao_tamanho_regras":  {
+                                        "5":  12,
+                                        "6":  18
+                                    },
+    "observacoes":  [
+                        "Execução com N=30 preservada para o candidato de suporte selecionado na exploração. A existência de ao menos 30 regras de três itens foi verificada separadamente em execução exploratória N=2000."
+                    ]
+}

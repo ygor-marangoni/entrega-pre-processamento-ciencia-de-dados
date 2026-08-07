@@ -1,0 +1,26 @@
+{
+  "tipo": "busca_experimental",
+  "weka_version": "3.8.7",
+  "entrada": "data/preparadas/base_apriori_binaria.arff",
+  "classe": "weka.associations.Apriori",
+  "java_options": ["--add-opens", "java.base/java.lang=ALL-UNNAMED"],
+  "numRules": 30,
+  "metricType": "confidence (0)",
+  "minMetric": 0.9,
+  "lowerBoundMinSupport": 0.03,
+  "upperBoundMinSupport": 1.0,
+  "delta": 0.01,
+  "outputItemSets": true,
+  "treatZeroAsMissing": true,
+  "executado": true,
+  "tempo_total_shell_segundos": 3.705,
+  "tempo_weka_segundos": 2.887,
+  "suporte_efetivo_reportado": 0.05,
+  "quantidade_regras_geradas": 9,
+  "quantidade_regras_tres_itens": 4,
+  "quantidade_itemsets": 652,
+  "observacoes": [
+    "Com upper bound 1.0, o Apriori encerrou novamente em suporte efetivo 0.05 apesar do lower bound 0.03.",
+    "As próximas tentativas fixarão upperBoundMinSupport igual ao lowerBoundMinSupport para testar o suporte exato, preservando esta tentativa como evidência do comportamento automático."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "tipo": "busca_experimental",
+  "weka_version": "3.8.7",
+  "entrada": "data/preparadas/base_apriori_binaria.arff",
+  "classe": "weka.associations.Apriori",
+  "java_options": ["--add-opens", "java.base/java.lang=ALL-UNNAMED"],
+  "numRules": 30,
+  "metricType": "confidence (0)",
+  "minMetric": 0.9,
+  "lowerBoundMinSupport": 0.039,
+  "upperBoundMinSupport": 1.0,
+  "delta": 0.01,
+  "outputItemSets": true,
+  "treatZeroAsMissing": true,
+  "executado": true,
+  "tempo_total_shell_segundos": 2.133,
+  "tempo_weka_segundos": 1.678,
+  "suporte_efetivo_reportado": 0.05,
+  "quantidade_regras_geradas": 9,
+  "quantidade_regras_tres_itens": 4,
+  "quantidade_itemsets": 652,
+  "observacoes_execucao": [
+    "O WEKA novamente encerrou em suporte efetivo 0.05; lower bound 0.039 ainda não adicionou um ciclo suficiente para suporte 0.04.",
+    "A próxima tentativa em 0.03 preserva a redução progressiva e deverá alcançar a próxima granularidade efetiva."
+  ],
+  "observacoes_planejadas": [
+    "O lower bound 0.039 foi escolhido para alcançar suporte efetivo 0.04, conforme o comportamento real registrado em suporte_004_delta_001."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "tipo": "busca_experimental_suporte_exato",
+  "weka_version": "3.8.7",
+  "entrada": "data/preparadas/base_apriori_binaria.arff",
+  "classe": "weka.associations.Apriori",
+  "java_options": ["--add-opens", "java.base/java.lang=ALL-UNNAMED"],
+  "numRules": 30,
+  "metricType": "confidence (0)",
+  "minMetric": 0.9,
+  "lowerBoundMinSupport": 0.04,
+  "upperBoundMinSupport": 0.04,
+  "delta": 0.01,
+  "outputItemSets": true,
+  "treatZeroAsMissing": true,
+  "executado": true,
+  "tempo_total_shell_segundos": 2.342,
+  "tempo_weka_segundos": 1.964,
+  "suporte_efetivo_reportado": 0.04,
+  "quantidade_regras_geradas": 0,
+  "quantidade_regras_tres_itens": 0,
+  "quantidade_itemsets": 909,
+  "observacoes_execucao": [
+    "A configuração com upper e lower iguais gerou 909 itemsets, mas nenhuma regra apesar da confiança mínima inalterada de 0.9.",
+    "A tentativa é preservada e não será usada como candidato; a próxima investigação usará uma janela curta U=0.05 e M=0.04, mantendo a redução progressiva interna do Apriori."
+  ],
+  "observacoes_planejadas": [
+    "Após o modo automático encerrar em 0.05 mesmo com lower bounds menores, upper e lower foram igualados para medir o suporte exato de 0.04.",
+    "A alteração é experimental, registrada e não substitui as tentativas automáticas preservadas."
+  ]
+}

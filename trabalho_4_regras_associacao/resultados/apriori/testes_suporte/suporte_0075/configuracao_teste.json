@@ -1,0 +1,27 @@
+{
+  "tipo": "busca_experimental",
+  "weka_version": "3.8.7",
+  "entrada": "data/preparadas/base_apriori_binaria.arff",
+  "classe": "weka.associations.Apriori",
+  "java_options": ["--add-opens", "java.base/java.lang=ALL-UNNAMED"],
+  "numRules": 30,
+  "metricType": "confidence (0)",
+  "minMetric": 0.9,
+  "lowerBoundMinSupport": 0.075,
+  "upperBoundMinSupport": 1.0,
+  "delta": 0.05,
+  "outputItemSets": true,
+  "treatZeroAsMissing": true,
+  "executado": true,
+  "tempo_total_shell_segundos": 0.749,
+  "tempo_weka_segundos": 0.507,
+  "suporte_efetivo_reportado": 0.07,
+  "quantidade_regras_geradas": 9,
+  "quantidade_regras_tres_itens": 4,
+  "quantidade_itemsets": 340,
+  "observacoes": [
+    "O WEKA apresentou suporte efetivo arredondado para 0.07, correspondente a 750 instâncias e ao limite configurado 0.075.",
+    "Foram encontrados 27 itemsets L(1), 125 L(2), 143 L(3), 43 L(4) e 2 L(5).",
+    "Das 9 regras com confiança mínima 0.9, 4 possuem exatamente três itens totais."
+  ]
+}

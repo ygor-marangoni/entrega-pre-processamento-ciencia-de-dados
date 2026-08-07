@@ -1,0 +1,27 @@
+{
+  "tipo": "busca_experimental",
+  "weka_version": "3.8.7",
+  "entrada": "data/preparadas/base_apriori_binaria.arff",
+  "classe": "weka.associations.Apriori",
+  "java_options": ["--add-opens", "java.base/java.lang=ALL-UNNAMED"],
+  "numRules": 30,
+  "metricType": "confidence (0)",
+  "minMetric": 0.9,
+  "lowerBoundMinSupport": 0.4,
+  "upperBoundMinSupport": 1.0,
+  "delta": 0.05,
+  "outputItemSets": true,
+  "treatZeroAsMissing": true,
+  "executado": true,
+  "tempo_total_shell_segundos": 0.599,
+  "tempo_weka_segundos": 0.267,
+  "suporte_efetivo_reportado": 0.4,
+  "quantidade_regras_geradas": 0,
+  "quantidade_regras_tres_itens": 0,
+  "quantidade_itemsets": 11,
+  "observacoes": [
+    "Foram encontrados 5 itemsets L(1) e 6 itemsets L(2).",
+    "Nenhuma regra satisfez a confiança mínima de 0.9.",
+    "A opção --add-opens eliminou o aviso de compatibilidade observado no teste 0.50."
+  ]
+}

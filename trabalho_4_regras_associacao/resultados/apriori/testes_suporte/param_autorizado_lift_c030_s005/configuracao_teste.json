@@ -1,0 +1,30 @@
+﻿{
+    "tipo":  "busca_experimental_parametros_autorizados",
+    "weka_version":  "3.8.7",
+    "entrada":  "data/preparadas/base_apriori_binaria.arff",
+    "classe":  "weka.associations.Apriori",
+    "java_options":  [
+                         "--add-opens",
+                         "java.base/java.lang=ALL-UNNAMED"
+                     ],
+    "numRules":  30,
+    "metricType":  "lift (1)",
+    "minMetric":  0.3,
+    "lowerBoundMinSupport":  0.05,
+    "upperBoundMinSupport":  0.05,
+    "delta":  0.01,
+    "outputItemSets":  true,
+    "treatZeroAsMissing":  true,
+    "alteracao_autorizada":  true,
+    "executado":  true,
+    "codigo_saida":  0,
+    "tempo_total_shell_segundos":  2.739,
+    "tempo_weka_segundos":  2.232,
+    "suporte_efetivo_reportado":  0.05,
+    "quantidade_regras_geradas":  30,
+    "quantidade_regras_tres_itens":  0,
+    "quantidade_itemsets":  652,
+    "observacoes":  [
+                        "Rodada autorizada pelo usuário para variar métrica de ordenação e pontuação mínima, preservando -N 30, -I e -Z."
+                    ]
+}

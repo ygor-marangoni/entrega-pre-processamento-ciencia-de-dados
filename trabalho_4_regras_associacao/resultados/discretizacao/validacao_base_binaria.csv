@@ -1,0 +1,14 @@
+verificacao;esperado;observado;status;detalhe
+base_nominal_registros;10000;10000;APROVADO;A amostra autorizada deve ser preservada.
+base_nominal_atributos;8;8;APROVADO;As oito dimensões conceituais devem permanecer as mesmas.
+base_nominal_colunas_protegidas;nenhuma;nenhuma;APROVADO;A entrada técnica não pode conter campos protegidos.
+quantidade_itens_binarios;27 (soma programática das categorias);27;APROVADO;Não há quantidade codificada manualmente.
+registros_base_binaria;10000;10000;APROVADO;Nenhuma linha pode ser perdida ou adicionada.
+valores_binarios;somente 0 e 1;somente 0 e 1;APROVADO;0 representa ausência e 1 representa presença do item.
+itens_ativos_por_transacao;"mínimo=8; máximo=8";"mínimo=8; máximo=8";APROVADO;Cada dimensão original deve ativar exatamente um item.
+exclusividade_por_dimensao;1 item ativo em cada uma das 8 dimensões;confirmada;APROVADO;One-hot preserva exclusividade interna de cada atributo nominal.
+ordem_e_reconstrucao_nominal;reconstrução idêntica na mesma ordem;corresponde;APROVADO;A comparação linha a linha detecta omissão, duplicação ou alteração de categoria.
+frequencias_iguais_base_nominal;igualdade exata para todos os itens;confirmada;APROVADO;Cada coluna binária deve reproduzir a frequência da categoria de origem.
+csv_binario_salvo;idêntico à matriz gerada;corresponde;APROVADO;Confere valores e ordem após a escrita do CSV.
+arff_binario;"27 atributos {0,1}; 10000 linhas sem ?";válido;APROVADO;Formato técnico para o Apriori com -Z.
+base_nominal_preservada;a7444cbdadd0891837c7bf5f29c40e36eb68a5e7cf6a480b50d8435044c5a1a9;a7444cbdadd0891837c7bf5f29c40e36eb68a5e7cf6a480b50d8435044c5a1a9;APROVADO;A representação semântica não foi modificada.

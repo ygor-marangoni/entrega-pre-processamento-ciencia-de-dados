@@ -1,0 +1,30 @@
+{
+  "tipo": "busca_experimental",
+  "weka_version": "3.8.7",
+  "entrada": "data/preparadas/base_apriori_binaria.arff",
+  "classe": "weka.associations.Apriori",
+  "java_options": ["--add-opens", "java.base/java.lang=ALL-UNNAMED"],
+  "numRules": 30,
+  "metricType": "confidence (0)",
+  "minMetric": 0.9,
+  "lowerBoundMinSupport": 0.04,
+  "upperBoundMinSupport": 1.0,
+  "delta": 0.01,
+  "outputItemSets": true,
+  "treatZeroAsMissing": true,
+  "executado": true,
+  "tempo_total_shell_segundos": 2.585,
+  "tempo_weka_segundos": 1.966,
+  "suporte_efetivo_reportado": 0.05,
+  "quantidade_regras_geradas": 9,
+  "quantidade_regras_tres_itens": 4,
+  "quantidade_itemsets": 652,
+  "observacoes_execucao": [
+    "Mesmo com delta 0.01, o Apriori encerrou em suporte efetivo 0.05, pois sua parada ocorre antes de reduzir o suporte até o lower bound inclusive.",
+    "A tentativa preserva o comportamento observado; um lower bound de 0.039 será necessário para atingir suporte efetivo 0.04."
+  ],
+  "observacoes_planejadas": [
+    "Delta reduzido de 0.05 para 0.01 após a tentativa suporte_004 encerrar em suporte efetivo 0.09.",
+    "A finalidade é testar o limite inferior configurado com granularidade suficiente."
+  ]
+}

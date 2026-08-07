@@ -1,0 +1,46 @@
+﻿{
+    "tipo":  "execucao_final_apriori",
+    "weka_version":  "3.8.7",
+    "weka_jar":  "C:\\Program Files\\Weka-3-8-7\\weka.jar",
+    "java_version":  "OpenJDK Temurin 17.0.20",
+    "entrada":  "data/preparadas/base_apriori_binaria.arff",
+    "classe":  "weka.associations.Apriori",
+    "java_options":  [
+                         "--add-opens",
+                         "java.base/java.lang=ALL-UNNAMED"
+                     ],
+    "numRules":  30,
+    "metricType":  "lift (1)",
+    "minMetric":  0,
+    "lowerBoundMinSupport":  0.01,
+    "upperBoundMinSupport":  0.01,
+    "delta":  0.01,
+    "outputItemSets":  true,
+    "treatZeroAsMissing":  true,
+    "executado":  true,
+    "codigo_saida":  0,
+    "tempo_total_shell_segundos":  4.737,
+    "tempo_weka_segundos":  4.22,
+    "suporte_efetivo_reportado":  0.01,
+    "quantidade_regras_geradas":  30,
+    "quantidade_regras_tres_itens":  0,
+    "distribuicao_tamanho_regras":  {
+                                        "5":  12,
+                                        "6":  18
+                                    },
+    "quantidade_itemsets":  5119,
+    "itemsets_por_nivel":  {
+                               "1":  27,
+                               "2":  309,
+                               "3":  1405,
+                               "4":  2103,
+                               "5":  1093,
+                               "6":  176,
+                               "7":  6
+                           },
+    "observacoes":  [
+                        "Configuração aprovada a partir da Etapa 7.",
+                        "A saída integral foi preservada sem edição em resultado_apriori_final.txt.",
+                        "A mineração de regras de exatamente três itens será tratada posteriormente a partir da saída exploratória documentada, pois o WEKA não oferece filtro nativo de tamanho de regra."
+                    ]
+}
