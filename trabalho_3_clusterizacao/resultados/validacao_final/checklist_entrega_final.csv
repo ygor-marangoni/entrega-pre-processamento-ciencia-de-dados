@@ -1,0 +1,18 @@
+﻿item;status;evidencia
+Relatório PDF final;OK;"35 páginas; A4=True"
+Relatório DOCX final;OK;Gerado pelo script 11.
+Relatório Markdown final;OK;Fonte textual auditada.
+Base preparada CSV e ARFF;OK;"10.000 x 6; sem colunas protegidas."
+Base DBSCAN CSV e ARFF;OK;"ARFF original do AddCluster; CSV derivado fiel."
+Base SimpleKMeans CSV e ARFF;OK;Exportação final K=9.
+Base EM CSV e ARFF;OK;Exportação final K=9.
+Bases de análise;OK;Três bases de 10.000 x 49.
+p1.py e p2.py;OK;Cópias preservadas no Trabalho 3.
+Scripts próprios;OK;"Scripts 02 a 13 presentes; numeração funcional preservada."
+Configurações;OK;Arquivos reais e sem sobrescrever testes.
+Hopkins;OK;0,941745479089317 reproduzido duas vezes.
+Gráficos;OK;Exploração, clusters e k-distance.
+README;OK;Instruções e estado das etapas.
+Auditoria final;OK;Fase 1 preservada.
+Logs textuais brutos do WEKA;RESSALVA;"Não preservados; ARFFs comprovam AddCluster, configurações e rótulos."
+Conferência humana de autoria/docente;RESSALVA;Confirmar grafia, turma e dados institucionais da folha de rosto.

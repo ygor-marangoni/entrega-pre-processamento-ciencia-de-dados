@@ -51,8 +51,9 @@ def resolve_base_dir(base_dir_arg=None):
             raise NotADirectoryError(f"Caminho informado não é um diretório: {base_path}")
         return base_path
 
+    organized_data_dir = Path(__file__).resolve().parent.parent / "data"
     cwd = Path.cwd().resolve()
-    for directory in [cwd, *cwd.parents]:
+    for directory in [organized_data_dir, cwd, *cwd.parents]:
         required = [directory / filename for filename in REQUIRED_INPUTS]
         if all(path.exists() for path in required):
             return directory
@@ -259,14 +260,17 @@ def main() -> None:
     global OUT_FINAL, OUT_METRIC, OUT_DICT, OUT_SUMMARY, OUT_JSON, OUT_DB
 
     BASE_DIR = resolve_base_dir(args.base_dir)
+    organized_data_dir = Path(__file__).resolve().parent.parent / "data"
+    results_dir = BASE_DIR.parent / "resultados" if BASE_DIR == organized_data_dir else BASE_DIR
+    results_dir.mkdir(parents=True, exist_ok=True)
     PATH_EMPRESTIMOS = str(BASE_DIR / "emprestimos.csv")
     PATH_SERASA = str(BASE_DIR / "serasa.csv")
     PATH_PREV = str(BASE_DIR / "emprestimos_anteriores.csv")
     OUT_FINAL = str(BASE_DIR / "base_final_preprocessada.csv")
     OUT_METRIC = str(BASE_DIR / "base_final_com_metrica.csv")
     OUT_DICT = str(BASE_DIR / "dicionario_codificacao_categorias.csv")
-    OUT_SUMMARY = str(BASE_DIR / "resumo_estatistico_preprocessamento.csv")
-    OUT_JSON = str(BASE_DIR / "resumo_processamento.json")
+    OUT_SUMMARY = str(results_dir / "resumo_estatistico_preprocessamento.csv")
+    OUT_JSON = str(results_dir / "resumo_processamento.json")
     OUT_DB = str(BASE_DIR / "preprocessamento_credito.db")
 
     print("1/9 Lendo base principal...")

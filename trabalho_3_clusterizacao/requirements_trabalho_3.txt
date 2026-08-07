@@ -1,0 +1,7 @@
+pandas
+numpy
+scikit-learn
+scipy
+matplotlib
+seaborn
+python-docx>=1.2,<2

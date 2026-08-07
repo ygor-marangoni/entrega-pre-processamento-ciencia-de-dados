@@ -4,7 +4,7 @@
 Prepara a base do Trabalho 1 para uso no WEKA no Trabalho 2.
 
 Entrada principal:
-- base_final_preprocessada.csv, na raiz do projeto.
+- trabalho_1_preprocessamento/data/base_final_preprocessada.csv.
 
 Saidas:
 - trabalho_2_classificacao/data/base_weka_completa.csv
@@ -33,7 +33,7 @@ TRABALHO_DIR = SCRIPT_DIR.parent
 PROJECT_ROOT = TRABALHO_DIR.parent
 DATA_DIR = TRABALHO_DIR / "data"
 
-DEFAULT_INPUT = PROJECT_ROOT / "base_final_preprocessada.csv"
+DEFAULT_INPUT = PROJECT_ROOT / "trabalho_1_preprocessamento" / "data" / "base_final_preprocessada.csv"
 DEFAULT_COMPLETE_CSV = DATA_DIR / "base_weka_completa.csv"
 DEFAULT_COMPLETE_ARFF = DATA_DIR / "base_weka_completa.arff"
 DEFAULT_REDUCED_CSV = DATA_DIR / "base_weka_reduzida.csv"
@@ -151,7 +151,7 @@ def parse_args() -> argparse.Namespace:
         "--entrada",
         type=Path,
         default=DEFAULT_INPUT,
-        help="Caminho para base_final_preprocessada.csv. Padrao: raiz do projeto.",
+        help="Caminho para base_final_preprocessada.csv. Padrao: pasta data do Trabalho 1.",
     )
     return parser.parse_args()
 

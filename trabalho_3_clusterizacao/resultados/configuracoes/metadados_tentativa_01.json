@@ -1,0 +1,59 @@
+{
+  "etapa": 4,
+  "tentativa": 1,
+  "generated_at": "2026-07-21T20:33:17-03:00",
+  "timezone": "America/Sao_Paulo",
+  "csv_separator": ";",
+  "logic_reference": "trabalho_3_clusterizacao/scripts/originais/p1.py",
+  "approved_configuration_source": "trabalho_3_clusterizacao/resultados/exploracao/analise_atributos.md",
+  "auxiliary_analysis_base": {
+    "path": "C:\\Users\\drz\\Desktop\\Faculdade\\CD\\entrega_preprocessamento_ciencia_dados\\trabalho_3_clusterizacao\\data\\amostras\\base_amostra_10000_analise.csv",
+    "sha256": "fbc3e8d592bf406b65c93e445f7849a68685eccd7637689344d68a78404a3b22",
+    "rows": 10000,
+    "columns": 42,
+    "row_id_sequence_sha256": "17a35a53a92f836ea88f776b30f6ba69d2a9a4afffc91dfb77c838bd95a7ba31",
+    "SK_ID_CURR_preserved": true,
+    "TARGET_preserved": true
+  },
+  "output": {
+    "path": "C:\\Users\\drz\\Desktop\\Faculdade\\CD\\entrega_preprocessamento_ciencia_dados\\trabalho_3_clusterizacao\\data\\preparadas\\base_clusterizacao_tentativa_01.csv",
+    "sha256": "00fb8f3e1fe9524694acac5e46eafebdc1bee8e358fde2eaa38267ac57baeac8",
+    "rows": 10000,
+    "columns": 6,
+    "column_names": [
+      "AMT_CREDIT",
+      "CNT_CHILDREN",
+      "FLAG_OWN_CAR_COD",
+      "AGE_YEARS",
+      "CREDIT_INCOME_RATIO",
+      "SER_CREDITOS_ATIVOS"
+    ]
+  },
+  "configuration_file": {
+    "path": "C:\\Users\\drz\\Desktop\\Faculdade\\CD\\entrega_preprocessamento_ciencia_dados\\trabalho_3_clusterizacao\\resultados\\configuracoes\\configuracao_tentativa_01.csv",
+    "sha256": "358fe8a9f08e80ad3103d169df2404d48eef09bf1614dc0676c83a28c550498f"
+  },
+  "missing_values_policy": {
+    "numeric": "Imputação pela mediana somente se necessário.",
+    "nominal": "Imputação pela moda somente se necessário.",
+    "values_actually_imputed": 0
+  },
+  "nominal_policy": {
+    "FLAG_OWN_CAR_COD": "Códigos 0/1 recuperados como N/Y e preservados como nominais.",
+    "weight_behavior": "Como no p1.py original, peso nominal > 0 inclui o campo, mas sqrt(peso) não é aplicado."
+  },
+  "validations": {
+    "exactly_10000_rows": true,
+    "only_approved_attributes": true,
+    "no_SK_ID_CURR": true,
+    "no_TARGET": true,
+    "no_ROW_ID_AMOSTRA": true,
+    "no_missing_values": true,
+    "no_empty_columns": true,
+    "numeric_ranges_valid": true,
+    "nominal_values_valid": true,
+    "order_preserved_by_source_index": true,
+    "order_traceable_by_row_id_sequence_hash": true
+  },
+  "hopkins_executed": false
+}

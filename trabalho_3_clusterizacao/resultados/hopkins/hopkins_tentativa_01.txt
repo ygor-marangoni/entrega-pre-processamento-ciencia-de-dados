@@ -1,0 +1,27 @@
+ESTATÍSTICA DE HOPKINS — TENTATIVA 01
+================================================
+Data: 2026-07-21T20:40:28-03:00
+Base: C:\Users\drz\Desktop\Faculdade\CD\entrega_preprocessamento_ciencia_dados\trabalho_3_clusterizacao\data\preparadas\base_clusterizacao_tentativa_01.csv
+Hash da base: 00fb8f3e1fe9524694acac5e46eafebdc1bee8e358fde2eaa38267ac57baeac8
+Registros da base: 10000
+Amostra real: 100
+Amostra virtual: 100
+Seed: 42
+Atributos: AMT_CREDIT, CNT_CHILDREN, FLAG_OWN_CAR_COD, AGE_YEARS, CREDIT_INCOME_RATIO, SER_CREDITOS_ATIVOS
+Pesos: AMT_CREDIT=6 | CNT_CHILDREN=4 | FLAG_OWN_CAR_COD=1 | AGE_YEARS=5 | CREDIT_INCOME_RATIO=7 | SER_CREDITOS_ATIVOS=5
+Atributos numéricos: AMT_CREDIT, CNT_CHILDREN, AGE_YEARS, CREDIT_INCOME_RATIO, SER_CREDITOS_ATIVOS
+Atributos nominais: FLAG_OWN_CAR_COD
+Dimensões após One-Hot: 7
+
+Soma u: 115.886456441970
+Soma w: 7.168507999202
+Média u: 1.158864564420
+Média w: 0.071685079992
+
+H = 0.941745479089
+Limiar: 0.7
+Decisão: APROVADA_PARA_PREPARACAO_WEKA
+Interpretação: H >= 0,7: a tentativa apresenta forte tendência de clusterização.
+
+Reprodutibilidade: duas execuções consecutivas com seed 42 produziram resultados idênticos.
+Hopkins calculado pela lógica do p2.py, com seed acrescentada aos registros virtuais.

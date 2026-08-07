@@ -1,0 +1,47 @@
+{
+  "etapa": 11,
+  "generated_at": "2026-07-21T21:25:06-03:00",
+  "timezone": "America/Sao_Paulo",
+  "base_analise": {
+    "path": "C:\\Users\\drz\\Desktop\\Faculdade\\CD\\entrega_preprocessamento_ciencia_dados\\trabalho_3_clusterizacao\\data\\amostras\\base_amostra_10000_analise.csv",
+    "sha256": "fbc3e8d592bf406b65c93e445f7849a68685eccd7637689344d68a78404a3b22"
+  },
+  "base_preparada": {
+    "path": "C:\\Users\\drz\\Desktop\\Faculdade\\CD\\entrega_preprocessamento_ciencia_dados\\trabalho_3_clusterizacao\\data\\preparadas\\base_clusterizacao_final.csv",
+    "sha256": "00fb8f3e1fe9524694acac5e46eafebdc1bee8e358fde2eaa38267ac57baeac8"
+  },
+  "transformados_com_sufixo": "_TRANSFORMADO",
+  "target_usado_no_agrupamento": false,
+  "outputs": {
+    "dbscan": {
+      "exportacao_weka": "C:\\Users\\drz\\Desktop\\Faculdade\\CD\\entrega_preprocessamento_ciencia_dados\\trabalho_3_clusterizacao\\data\\clusterizadas_weka\\base_clusterizada_dbscan.arff",
+      "sha256_exportacao": "cdc80359d65a375ac44162931d1eec0678da1f015950effa858ac4367b3be0ce",
+      "saida": "C:\\Users\\drz\\Desktop\\Faculdade\\CD\\entrega_preprocessamento_ciencia_dados\\trabalho_3_clusterizacao\\data\\analise\\analise_cluster_dbscan.csv",
+      "sha256_saida": "686933b6efecdac05df0de4848240b4db078255fde1368fc411a524080ce5f07",
+      "registros": 10000,
+      "colunas": 49,
+      "clusters": 9,
+      "ruidos": 296
+    },
+    "kmeans": {
+      "exportacao_weka": "C:\\Users\\drz\\Desktop\\Faculdade\\CD\\entrega_preprocessamento_ciencia_dados\\trabalho_3_clusterizacao\\data\\clusterizadas_weka\\base_clusterizada_kmeans_final.csv",
+      "sha256_exportacao": "2f027aa227bbc60d9b474bddd2f30fe1dca2b2b041363790692e02e7ba29df8f",
+      "saida": "C:\\Users\\drz\\Desktop\\Faculdade\\CD\\entrega_preprocessamento_ciencia_dados\\trabalho_3_clusterizacao\\data\\analise\\analise_cluster_kmeans.csv",
+      "sha256_saida": "95d4458d71278893196a83e6eaa00bd459b2d92f19fe7693ca20d8a78125da62",
+      "registros": 10000,
+      "colunas": 49,
+      "clusters": 9,
+      "ruidos": 0
+    },
+    "em": {
+      "exportacao_weka": "C:\\Users\\drz\\Desktop\\Faculdade\\CD\\entrega_preprocessamento_ciencia_dados\\trabalho_3_clusterizacao\\data\\clusterizadas_weka\\base_clusterizada_em_final.csv",
+      "sha256_exportacao": "05109a8a61e4cd6fd9e91f2faa3a9a16d20b7f173de024b47b3b132de01675d2",
+      "saida": "C:\\Users\\drz\\Desktop\\Faculdade\\CD\\entrega_preprocessamento_ciencia_dados\\trabalho_3_clusterizacao\\data\\analise\\analise_cluster_em.csv",
+      "sha256_saida": "30694af1913206c879582ef19753b0cdfed79e2ef6e10786aaa84fc02481286d",
+      "registros": 10000,
+      "colunas": 49,
+      "clusters": 9,
+      "ruidos": 0
+    }
+  }
+}

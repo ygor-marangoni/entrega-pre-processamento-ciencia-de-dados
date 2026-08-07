@@ -9,7 +9,7 @@ Não há substituição por scikit-learn ou execução alternativa em Python. Os
 A base principal é:
 
 ```text
-../base_final_preprocessada.csv
+../trabalho_1_preprocessamento/data/base_final_preprocessada.csv
 ```
 
 Regras aplicadas:

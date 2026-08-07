@@ -7,6 +7,7 @@ import streamlit as st
 
 PROJECT_ROOT = Path(__file__).resolve().parent
 RUN_SCRIPT = PROJECT_ROOT / "preprocessamento_credito.py"
+DEFAULT_DATA_DIR = PROJECT_ROOT.parent / "data"
 
 REQUIRED_FILES = ["emprestimos.csv", "serasa.csv", "emprestimos_anteriores.csv"]
 
@@ -52,8 +53,9 @@ def format_file_size(size_bytes):
 def get_available_outputs(base_path):
     available = []
     for filename, description in OUTPUT_FILES:
-        filepath = base_path / filename
-        if filepath.exists():
+        candidates = [base_path / filename, base_path.parent / "resultados" / filename]
+        filepath = next((path for path in candidates if path.exists()), None)
+        if filepath is not None:
             available.append((filepath, description))
     return available
 
@@ -85,8 +87,12 @@ def render_outputs(base_path):
                         on_click="ignore",
                     )
 
-    summary_path = base_path / "resumo_processamento.json"
-    if summary_path.exists():
+    summary_candidates = [
+        base_path / "resumo_processamento.json",
+        base_path.parent / "resultados" / "resumo_processamento.json",
+    ]
+    summary_path = next((path for path in summary_candidates if path.exists()), None)
+    if summary_path is not None:
         st.subheader("Resumo do processamento")
         summary = json.loads(summary_path.read_text(encoding="utf-8"))
         st.json(summary)
@@ -108,7 +114,7 @@ st.write(
 
 base_dir = st.text_input(
     "Pasta com os arquivos de entrada",
-    value=str(PROJECT_ROOT).replace("\\", "/"),
+    value=str(DEFAULT_DATA_DIR).replace("\\", "/"),
     help="Informe a pasta contendo emprestimos.csv, serasa.csv e emprestimos_anteriores.csv.",
 )
 

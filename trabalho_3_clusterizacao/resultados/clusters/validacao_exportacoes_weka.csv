@@ -1,0 +1,4 @@
+metodo;arquivo;sha256;registros;atributos_entrada;atributos_exportados;coluna_cluster_presente;clusters;ruidos;percentual_ruidos;ordem_preservada;valores_entrada_preservados;colunas_protegidas_ausentes
+dbscan;base_clusterizada_dbscan.arff;cdc80359d65a375ac44162931d1eec0678da1f015950effa858ac4367b3be0ce;10000;6;7;True;9;296;2.96;True;True;True
+kmeans;base_clusterizada_kmeans_final.csv;2f027aa227bbc60d9b474bddd2f30fe1dca2b2b041363790692e02e7ba29df8f;10000;6;7;True;9;0;0.0;True;True;True
+em;base_clusterizada_em_final.csv;05109a8a61e4cd6fd9e91f2faa3a9a16d20b7f173de024b47b3b132de01675d2;10000;6;7;True;9;0;0.0;True;True;True

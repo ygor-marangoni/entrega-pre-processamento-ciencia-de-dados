@@ -1,0 +1,7 @@
+atributo;tipo;peso;raiz_peso;raiz_peso_aplicada;minimo_original;maximo_original;ausentes_originais;tratamento_ausentes;justificativa;escala_final;valores_unicos_finais
+AMT_CREDIT;Numérico;6;2.449489742783178;True;45000.0;3600000.0;0;"Mediana (512721) se ausente; nenhum valor alterado.";Captura o porte do empréstimo e diferencia necessidades de crédito.;[0, sqrt(6)] = [0, 2.44948974278];1815
+CNT_CHILDREN;Numérico;4;2.0;True;0.0;5.0;0;"Mediana (0) se ausente; nenhum valor alterado.";Acrescenta composição familiar e potencial necessidade de mobilidade.;[0, sqrt(4)] = [0, 2];6
+FLAG_OWN_CAR_COD;Nominal;1;1.0;False;0.0;1.0;0;"Moda nominal (N) se ausente; nenhum valor alterado.";Separa clientes com e sem veículo, preservando a natureza nominal.;"Nominal {N,Y}; preservado sem multiplicação pela raiz do peso.";2
+AGE_YEARS;Numérico;5;2.23606797749979;True;21.07;68.99;0;"Mediana (43.14) se ausente; nenhum valor alterado.";Distingue estágios de vida com boa interpretação comercial.;[0, sqrt(5)] = [0, 2.2360679775];3959
+CREDIT_INCOME_RATIO;Numérico;7;2.6457513110645907;True;0.004808;35.477778;0;"Mediana (3.2849895) se ausente; nenhum valor alterado.";Resume o crédito em relação à renda, com peso controlado por ser derivado.;[0, sqrt(7)] = [0, 2.64575131106];4962
+SER_CREDITOS_ATIVOS;Numérico;5;2.23606797749979;True;0.0;17.0;0;"Mediana (1) se ausente; nenhum valor alterado.";Representa a intensidade do histórico externo de crédito.;[0, sqrt(5)] = [0, 2.2360679775];17

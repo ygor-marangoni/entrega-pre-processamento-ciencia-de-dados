@@ -1,0 +1,51 @@
+{
+  "etapa": 2,
+  "descricao": "Amostra aleatória, reproduzível e rastreável de 10.000 registros.",
+  "generated_at": "2026-07-21T20:01:21-03:00",
+  "timezone": "America/Sao_Paulo",
+  "seed": 42,
+  "random_state": 42,
+  "sample_size": 10000,
+  "sampling_without_replacement": true,
+  "csv_separator": ";",
+  "row_id": {
+    "column": "ROW_ID_AMOSTRA",
+    "semantics": "Posição 1-based do registro na base de origem, sem contar o cabeçalho.",
+    "unique": true,
+    "minimum_sampled": 17,
+    "maximum_sampled": 307495
+  },
+  "source": {
+    "path": "C:\\Users\\drz\\Desktop\\Faculdade\\CD\\entrega_preprocessamento_ciencia_dados\\trabalho_1_preprocessamento\\data\\base_final_preprocessada.csv",
+    "rows": 307511,
+    "columns": 41,
+    "size_bytes": 60943180,
+    "sha256": "651062c36ef1bd2b70b41f7c516386fdd8006d3eab0f9984ca7718d5f29ef861"
+  },
+  "outputs": {
+    "complete": {
+      "path": "C:\\Users\\drz\\Desktop\\Faculdade\\CD\\entrega_preprocessamento_ciencia_dados\\trabalho_3_clusterizacao\\data\\amostras\\base_amostra_10000_completa.csv",
+      "rows": 10000,
+      "columns": 40,
+      "contains_SK_ID_CURR": false,
+      "contains_TARGET": false,
+      "sha256": "aac7843e20c7f29f10730bc4cc6de057305a8c3867ba63a132f613ff87942fd6"
+    },
+    "analysis": {
+      "path": "C:\\Users\\drz\\Desktop\\Faculdade\\CD\\entrega_preprocessamento_ciencia_dados\\trabalho_3_clusterizacao\\data\\amostras\\base_amostra_10000_analise.csv",
+      "rows": 10000,
+      "columns": 42,
+      "contains_SK_ID_CURR": true,
+      "contains_TARGET": true,
+      "sha256": "fbc3e8d592bf406b65c93e445f7849a68685eccd7637689344d68a78404a3b22"
+    }
+  },
+  "validations": {
+    "exactly_10000_rows": true,
+    "row_id_unique": true,
+    "same_order_in_both_outputs": true,
+    "records_match_source_by_row_id": true,
+    "sampled_SK_ID_CURR_unique": true,
+    "protected_columns_only_in_analysis": true
+  }
+}
